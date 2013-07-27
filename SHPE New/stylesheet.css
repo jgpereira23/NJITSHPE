@@ -1,0 +1,48 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color: gray;
+}
+#container{
+	margin:0 auto;
+	padding:0px;
+	position:center;
+	width: 900px;
+	height:100%;
+}
+.bar{
+	padding:0px;
+	margin:0 auto;
+	background-color:blue;
+	position:relative;
+	display:inline-block;
+	width:33%;
+	height:100%;
+}
+#navbar{
+	width:100%;
+	height:350px;
+	background-color:black;
+}
+#navbar ul{
+	margin-right:8px;
+	list-style-type:none;
+	float:right;
+}
+#logo{
+	width:150px;
+	height:150px;
+	float:right;
+	margin: 8px 8px 0 0;
+	background-color:green;
+}
+#navbar ul li{
+	font-family: Verdana;
+	float:right;
+	font-size:1.6em;
+	color:white;
+}
+#navbar ul li:hover{
+	border-radius:3px;
+	background-color: #2586d7;
+}
