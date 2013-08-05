@@ -16,8 +16,17 @@ body{
 	background-color:blue;
 	position:relative;
 	display:inline-block;
-	width:33%;
+	
 	height:100%;
+}
+#sidebar{
+	width:25%;
+}
+#content{
+	width:45%;
+}
+#nav{
+	width:30%;
 }
 #navbar{
 	width:100%;
@@ -39,10 +48,37 @@ body{
 #navbar ul li{
 	font-family: Verdana;
 	float:right;
-	font-size:1.6em;
+	font-size:1.4em;
 	color:white;
 }
 #navbar ul li:hover{
 	border-radius:3px;
-	background-color: #2586d7;
+	background-color: gray;
+}
+#social{
+	height:30px;
+	margin:0 auto;
+	padding:0px;
+	width:99%;
+	float:right;
+	background-color:green;
+}
+#social ul{
+	margin:0 auto;
+	padding:0px;
+	float:right;
+	list-style-type:none;
+}
+
+#social ul li{
+	padding:0px;
+	margin:3px 3px 3px 0px;
+	display:inline-block;
+	width:24px;
+	height:24px;
+	border-radius:3px;
+	background-color:pink;
+}
+#social ul li:hover{
+	background-color:red;
 }
