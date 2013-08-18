@@ -1,7 +1,31 @@
 body{
 	margin:0px;
 	padding:0px;
+}
+#wrapper{
+	margin:0px;
+	padding:0px;
 	background-color: gray;
+	text-align:center;
+}
+#vid{
+	padding:0px;
+	position:absolute;
+	top:12%;
+	left: 0px;
+	right: 0px;
+	z-index:2;
+	text-align:center;
+	display:none;
+}
+iframe{
+	background-color:black;
+	border: gray 7px solid;
+	border-radius: 5px;
+}
+#thumb{
+	margin:0 auto;
+	padding:0px;
 }
 #container{
 	margin:0 auto;
@@ -33,17 +57,17 @@ body{
 	height:350px;
 	background-color:black;
 }
-#navbar ul{
-	margin-right:8px;
-	list-style-type:none;
-	float:right;
-}
 #logo{
 	width:150px;
 	height:150px;
 	float:right;
 	margin: 8px 8px 0 0;
 	background-color:green;
+}
+#navbar ul{
+	margin-right:8px;
+	list-style-type:none;
+	float:right;
 }
 #navbar ul li{
 	font-family: Verdana;
@@ -54,6 +78,20 @@ body{
 #navbar ul li:hover{
 	border-radius:3px;
 	background-color: gray;
+}
+.hovernav{
+	position: relative;
+	left:100%;
+	border-radius:3px;
+	background-color:gray;
+}
+#hovernav ul{
+	margin:0 auto;
+	padding:0px;
+	list-style-type:none;
+}
+#hovernav ul li{
+	color: white;
 }
 #social{
 	height:30px;
@@ -72,10 +110,10 @@ body{
 
 #social ul li{
 	padding:0px;
-	margin:3px 3px 3px 0px;
+	margin:4px 4px 4px 0px;
 	display:inline-block;
-	width:24px;
-	height:24px;
+	width:22px;
+	height:22px;
 	border-radius:3px;
 	background-color:pink;
 }
