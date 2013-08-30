@@ -1,27 +1,81 @@
 body{
 	margin:0px;
 	padding:0px;
+	background:url(Images/newBG.png) no-repeat center center fixed;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 #wrapper{
 	margin:0px;
 	padding:0px;
-	background-color: gray;
 	text-align:center;
+}
+#inactive{
+	padding: 0px;
+	margin: 0px;
+	position:absolute;
+	width:100%;
+	height: 100%;
+	z-index:-1;
+	background-color:black;
+	opacity:0.0;
+	filter:alpha(opacity=0); 
+
 }
 #vid{
 	padding:0px;
 	position:absolute;
 	top:12%;
-	left: 0px;
-	right: 0px;
-	z-index:2;
+	left:362px;
+	z-index:5;
 	text-align:center;
 	display:none;
 }
+.submenu{
+	margin:0px;
+	padding-right:0px;
+	position:absolute;
+	left:260px;
+	text-align:right;
+	float:right;
+	width:185px;
+	z-index:2;
+	display:none;
+}
+.submenu ul{
+	margin:0px;
+	padding:2px;
+	width:150PX;
+	list-style-type:none;
+	text-align:right;
+}
+.submenu ul li{
+	background-color:gray;
+	padding:0;
+	margin:0px;
+	font-size:14px;
+	width:100%;
+	float:right;
+	clear:both;
+	z-index:4;
+	font-family:Verdana;
+}
+.submenu ul li a{
+	padding: 5px 4px 5px 0px;
+	display:block;
+}
+.submenu ul li a:hover{
+	background-color:#666666;
+}
+.submenu ul li a:link{
+	color:white;
+	text-decoration:none;
+}
 iframe{
 	background-color:black;
-	border: gray 7px solid;
-	border-radius: 5px;
+	box-shadow: 0px 0px 10px 5px;
 }
 #thumb{
 	margin:0 auto;
@@ -31,16 +85,14 @@ iframe{
 	margin:0 auto;
 	padding:0px;
 	position:center;
-	width: 900px;
+	width: 925px;
 	height:100%;
 }
 .bar{
 	padding:0px;
 	margin:0 auto;
-	background-color:blue;
 	position:relative;
 	display:inline-block;
-	
 	height:100%;
 }
 #sidebar{
@@ -58,22 +110,22 @@ iframe{
 	background-color:black;
 }
 #logo{
-	width:150px;
-	height:150px;
+	width:100%;
+	height:100px;
 	float:right;
-	margin: 8px 8px 0 0;
-	background-color:green;
+	margin: 12px -2px 0 0;
 }
 #navbar ul{
 	margin-right:8px;
 	list-style-type:none;
 	float:right;
-}
-#navbar ul li{
 	font-family: Verdana;
-	float:right;
 	font-size:1.4em;
 	color:white;
+}
+#navbar ul li{
+	clear:both;
+	float:right;
 }
 #navbar ul li:hover{
 	border-radius:3px;
@@ -99,7 +151,6 @@ iframe{
 	padding:0px;
 	width:99%;
 	float:right;
-	background-color:green;
 }
 #social ul{
 	margin:0 auto;
@@ -115,8 +166,15 @@ iframe{
 	width:22px;
 	height:22px;
 	border-radius:3px;
-	background-color:pink;
 }
-#social ul li:hover{
-	background-color:red;
+#social ul li img{
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
+    filter: gray; 
+    -webkit-filter: grayscale(100%);	
+}
+#social ul li img:hover{
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: none; 
+    -webkit-filter: grayscale(0%);
+	
 }

@@ -1,17 +1,21 @@
 $(document).ready(function(){
-	if($('#vid').is(':visible')){
-		$(document).bind('click', function (e) {
-			$('#vid').toggle();
-			$('#wrapper').fadeTo('fast', 1.0);
+
+	$("#navbar ul li").hover(function(){
+		$(this).children(".submenu").fadeToggle("fast");
+	});
+	
+	$("#logo").click(function(){//change to thumb class for every video use
+		$("#inactive").css("z-index", "4");
+		$("#inactive").fadeTo('slow', 0.5, function(){
+			$("#vid").fadeIn();
+			$("iframe").attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));//change to <a> tag using player
 		});
-		$('#vid').bind('click', function(e) {
-			e.stopPropagation();
+	});
+	$("#inactive").click(function(){
+		$("#vid").fadeOut(function(){
+			$("#inactive").css("z-index", "-1");
+			$("#inactive").fadeTo('slow', 0.0);
+			$('iframe').get(0).stopVideo();
 		});
-	}
-	else{
-		$('#logo').click(function() {
-			$('#vid').toggle();
-			$('#wrapper').fadeTo('slow', 0.7);
-		});
-	}
+	});
 });
