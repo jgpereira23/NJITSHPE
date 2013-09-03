@@ -3,7 +3,7 @@ $(document).ready(function(){
 		$(this).children(".submenu").fadeToggle("fast");
 	});
 	
-	$(".thumb").click(function(){//change to thumb class for every video use
+	$("#logo").click(function(){
 		$("#inactive").css("z-index", "4");
 		$("#inactive").fadeTo('slow', 0.5, function(){
 			$("#vid").fadeIn();
@@ -12,8 +12,33 @@ $(document).ready(function(){
 	});
 	$("#inactive").click(function(){
 		$("#vid").fadeOut(function(){
-			$("#inactive").fadeTo('slow',0.0)
-			$("#inactive").css("z-index", "-1");
+			$("#inactive").fadeTo('slow',0.0,function(){
+				$("#inactive").css("z-index", "-1");
+			});
 		});
+	});
+	$("#UpImg1").hover(function() {
+		$("#UpImg1").css("border-color","#0B3383");
+		$("#UpImg2").css("border-color","black");
+		$("#UpImg3").css("border-color","black");
+		$("#Update1").show();
+		$("#Update2").hide();
+		$("#Update3").hide();
+	});
+	$("#UpImg2").hover(function() {
+		$("#UpImg1").css("border-color","black");
+		$("#UpImg2").css("border-color","#0B3383");
+		$("#UpImg3").css("border-color","black");
+		$("#Update1").hide();
+		$("#Update2").show();
+		$("#Update3").hide();
+	});
+	$("#UpImg3").hover(function() {
+		$("#UpImg1").css("border-color","black");
+		$("#UpImg2").css("border-color","black");
+		$("#UpImg3").css("border-color","#0B3383");
+		$("#Update1").hide();
+		$("#Update2").hide();
+		$("#Update3").show();
 	});
 });

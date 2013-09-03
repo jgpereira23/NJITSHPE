@@ -1,35 +1,101 @@
-<DOCTYPE? html>
+<!DOCTYPE? html>
 <html>
 	<head>
 		<title>NJIT SHPE</title>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
-
 	</head>
 	<body>
-		<div id="vid"><iframe width="640" height="480" src="http://www.youtube.com/embed/BYW6C44zo24" frameborder="0"></iframe></div>
-		<div id="wrapper" class="active">
+		<div id="vid"><iframe width="640" height="480" name="action" frameborder="0" ></iframe></div>
+		<div id="inactive"></div>
 		<div id="container">
 			<div class="bar" id="nav">
 				<div id="navbar">
-				<div id="logo"></div>
+				<div id="logo"><a href="index.html"><img src="Images/SHPE logo.png"></a></div>
+				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
 				<ul>
-					<li><div id="submenu"><ul><li>Scholarships</li>
-					<li>Internships</li><li>Miscellaneous</ul></div>OPPORTUNITIES</li>	
-					<li>E-BOARD</li></br>
-					<li><div id="submenu"><ul><li>Mission & Vision</li>
-					<li>History</li></div>ABOUT US</li>
-					<li><div id="submenu"><ul><li>Calendar</li>
-					<li>Details</li></div>EVENTS</li>
+					<li>
+						<div class="submenu">
+							<ul>
+								<li>
+									<a href="Scholarships.html">Scholarships</a>
+								</li>
+								<li>
+									<a href="Internships.html">Internships</a>
+								</li>
+								<li>
+									<a href="Miscellaneous.html">Miscellaneous</a>
+								</li>
+							</ul>
+						</div>
+						OPPORTUNITIES
+					</li>	
+					<li>E-BOARD</li>
+					<li>
+						<div class="submenu">
+							<ul>
+								<li>
+									<a href="MissionVision.html">Mission & Vision</a>
+								</li>
+								<li>
+									<a href="History.html">History</a>
+								</li>
+								<li>
+									<a href="Testimonials.html">Testimonials</a>
+								</li>
+							</ul>
+						</div>
+						ABOUT US
+					</li>
+					<li>
+						<div class="submenu">
+							<ul>
+								<li>
+									<a href="Calendar.html">Calendar</a>
+								</li>
+								<li>
+									<a href="Details.html">Details</a>
+								</li>
+							</ul>
+						</div>
+						EVENTS
+					</li>
 					<li>GALLERY</li>
-				</ul></div></div><div class="bar" id="content"></div><div class="bar" id="sidebar">
+				</ul>
+				</div></div><div class="bar" id="content"><div id="middle">
+					<h1>&nbsp;Scholarships</h1>
+					<h2>More info for this page will be coming soon!</h2>
+				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
-						<li></li><li></li><li></li><li></li>
+						<li><a href="https://twitter.com/NJIT_SHPE" target="_blank"><img class="grayscale" src="Images/Twitter.png"></a></li><li><a href="https://www.facebook.com/groups/njitshpe/" target="_blank"><img class="grayscale" src="Images/Facebook.png"></a></li><li><a href="http://instagram.com/njitshpe" target="_blank"><img class="grayscale" src="Images/Instagram.png"></a></li><li><a href="http://www.youtube.com/user/NJITSHPE" target="_blank"><img class="grayscale" src="Images/Youtube.png"></a></li>
 					</ul>
-				</div></div>
+				</div>
+			</div>
 		</div>
+		<div id="footer">
+			<div id="fwrap">
+				<table width = "100%">
+					<tr>
+						<td width="67%">
+							<h3>Latest Updates</h3>
+							<img class="UpImgs" id="UpImg1" src="Images/Updates-1.png"><img id="UpImg2" class="UpImgs" src="Images/Updates-1.png"><img class="UpImgs" id="UpImg3" src="Images/Updates-1.png">
+							<p class="Updates" id="Update1">Update 1</p>
+							<p class="Updates" id="Update2">Update 2</p>
+							<p class="Updates" id="Update3">Update 3</p>
+						</td>
+						<td width="33%">
+							<h3>General Info</h3>
+							Office: To be announced</br>
+							Office Hours: Find them here!</br>
+							General Meeting: Fridays 11:30AM Kupfrian 118</br>
+							<h3>Contact Us</h3>
+							<a href="mailto:njitshpe@gmail.com" target="_blank">Contact Us Via Email</a>
+							<a href="FAQ.html"><h3>FAQ</h3></a>
+						</td>
+					</tr>
+			</div>
 		</div>
 	</body>
 </html>
