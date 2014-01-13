@@ -1,4 +1,8 @@
+html{
+	height:100%;
+}
 body{
+	height:100%;
 	margin:0px;
 	padding:0px;
 	background:url(Images/newBG.png) no-repeat center center fixed;
@@ -15,8 +19,8 @@ text-decoration: none;
 	padding: 0px;
 	margin: 0px;
 	position:absolute;
+	opacity:.6;
 	width:100%;
-	height: 100%;
 	z-index:-1;
 	background-color:black;
 	display:none;
@@ -81,7 +85,6 @@ text-decoration: none;
 #container{
 	margin:0 auto;
 	padding:0px;
-	position:center;
 	width: 925px;
 }
 .bar{
@@ -157,7 +160,13 @@ text-decoration: none;
 	border-radius:3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	background-color: gray;
+	color: #6699CC;
+}
+#current{
+	border-radius:3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	color: #6699CC;
 }
 #social{
 	height:30px;
@@ -189,6 +198,9 @@ text-decoration: none;
     -webkit-filter: grayscale(0%);
 }
 .eboard{
+	width:135px;
+	height:135px;
+	background-size:100%;
 	border-radius:75px;
 	-webkit-border-radius: 75px;
 	-moz-border-radius: 75px;
@@ -215,13 +227,13 @@ text-decoration: none;
 	font-size:.75em;
 }
 .UpImgs{
-	margin-right:11px;
+	margin-right:10.5px;
 	margin-left:-5px;
 	border: solid 2px;
 }
 #UpImg1{
 	border-color:#0B3383;
-	background:url(Images/Updates/NewWebsite.jpg) no-repeat;
+	background:url(Images/Updates/Testi.png) no-repeat;
 }
 #UpImg2{
 	border-color:black;
@@ -229,7 +241,7 @@ text-decoration: none;
 }
 #UpImg3{
 	border-color:black;
-	background:url(Images/Updates/Social.png) no-repeat;
+	background:url(Images/Updates/Donate.png) no-repeat;
 }
 #fwrap table tr td a{
 	color:#FAFAFA;
@@ -249,3 +261,85 @@ text-decoration: none;
 	padding: 2px 0px 0px 5px;
 	background-color:#0B3383;
 }
+#donateText{
+	clear:both;
+	vertical-align:middle;
+	text-align:center;
+	font-size: 4.3em;
+	color:#FAFAFA;
+	font-family:Century Gothic, Sans-serif;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.buttons{
+	height:30px;
+	width:300px;
+	margin: 5px;
+	padding:5px 5px 5px 5px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline;
+	text-shadow:none;
+	border: 2px solid 336699;
+	color:#FAFAFA;
+	font-size:22px;
+	font-family:Century Gothic, Sans-serif;
+	background-color: 6699CC;
+}
+.buttons:hover{
+	border: 2px solid 6699CC;
+	background-color: 336699;
+}
+.canvas{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	top:10px;
+	max-height: 450px;
+	box-shadow: 0px 0px 10px 5px;
+}
+#leftArrow{
+	text-align:center;
+	font-family:Century Gothic, Sans-serif;
+	font-size:2em;
+	float:left;
+	height:100%;
+	width:20%;
+	background-color: 6699CC;
+	opacity: 0.5;
+}
+#rightArrow{
+	font-family:Century Gothic, Sans-serif;
+	font-size:2em;
+	text-align:center;
+	float:right;
+	height:100%;
+	width:20%;
+	background-color: 6699CC;
+	opacity: 0.5;
+}
+.arrow{
+	position:absolute;
+	top:45%;
+	display:inline;
+	width:40px;
+	margin-left:-5%;
+}
+#exit{
+	opacity: 0.5;
+	float:right;
+	height: 30;
+	width:30px;
+	margin-top:7px;
+	margin-right:7px;
+	background-image:url(Images/Gallery/Exit.png) no-repeat;
+}
+#gallery{
+	padding: 0px;
+	margin: 0px;
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	display:none;
+}
+
