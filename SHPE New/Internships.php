@@ -103,10 +103,21 @@
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Internships</h1>
-					<h2>Career Development Services</h2>
-					<p>- Career Development Services is a value–added contributor to the career planning and preparation of NJIT students and graduates. CDS is dedicated to continually improving our client services and to assuming leadership in the profession of career development.<br />
-					- CDS is a great tool every NJIT student should use. Easy navigation, useful information, and a huge audiance will maximize your opportunities.<br />
-					Website: <a href="http://www.njit.edu/cds/">http://www.njit.edu/cds/</a></p>
+					<!-- Display Internships -->
+					<?php
+					require("Scripts/connect.php");
+					
+					$query = "SELECT * FROM opportunities WHERE type = 'internship'";
+					
+					$result = mysql_query($query);
+					
+					while($row = mysql_fetch_array($result)){
+						echo "<h2> ".$row['title']." </h2>
+						<br> <h3>".$row['description']." </h3>
+						<br> <h4> ".$row['startDate']." through ".$row['endDate']."</h4>";
+						echo "<a href='".$row['link']."' >Click Here to Apply</a></br>";
+						}
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>

@@ -103,7 +103,21 @@
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Miscellaneous</h1>
-					<h2>More info for this page will be coming soon!</h2>
+					<!-- script goes here -->
+					<?php
+					require("Scripts/connect.php");
+					
+					$query = "SELECT * FROM opportunities WHERE type = 'miscellaneous'";
+					
+					$result = mysql_query($query);
+					
+					while($row = mysql_fetch_array($result)){
+						echo "<h2> ".$row['title']." </h2>
+						<br> <h3>".$row['description']." </h3>
+						<br> <h4> ".$row['startDate']." through ".$row['endDate']."</h4>";
+						echo "<a href='".$row['link']."' >Click Here to Apply</a></br>";
+						}
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
