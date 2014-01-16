@@ -103,7 +103,7 @@
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Internships</h1>
-					<!-- Display Internships -->
+					<!-- script goes here -->
 					<?php
 					require("Scripts/connect.php");
 					
@@ -112,10 +112,10 @@
 					$result = mysql_query($query);
 					
 					while($row = mysql_fetch_array($result)){
-						echo "<h2> ".$row['title']." </h2>
-						<br> <h3>".$row['description']." </h3>
-						<br> <h4> ".$row['startDate']." through ".$row['endDate']."</h4>";
-						echo "<a href='".$row['link']."' >Click Here to Apply</a></br>";
+						echo "<h2>".$row['title']."</h1>";
+						echo "<p>".$row['description']." </p>";
+						echo "<h4><i> ".$row['startDate']." through ".$row['endDate']."<i></h4>";
+						echo "<a href='".$row['link']."' ><b>Click Here to Apply</b></a></br></br>";
 						}
 					?>
 				</div></div><div class="bar" id="sidebar">
