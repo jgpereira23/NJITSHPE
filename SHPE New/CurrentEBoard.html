@@ -104,6 +104,35 @@
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Executive Board of 2013-2014</h1>
+					<?php
+					require("Scripts/connect.php");
+					$positions = ("President", "Vice President", "Treasurer", "Secretary", "Event Coordinator", "Recruitment Chair", "Public Relations", "Academic Chair", "Webmaster");
+					$odd=0;
+					for($i=0; $i<count($positions);$i++){
+						$sql = "SELECT * FROM eboard, user WHERE user.userID = eboard.userID AND position=" . position[$i];
+						$result = mysql_query($sql);
+						while($row = mysql_fetch_array($result)){
+							if($odd==1){
+								$align = "left";
+								$odd--;
+							}
+							else ($odd==0){
+								$align = "right";
+								$odd++;
+							}
+							if($row['link']==''){
+								$row['link']= 'Images/EBoardTest.png';
+							}
+							echo "<img class='eboard grayscale' align='" .$align. "' src='".{$row['link']}."'>";
+							echo "<h2 align='{$align}' >President</h2>";
+							echo "<p align='{$align}'>
+						Name: {$row['firstName']} {$row['lastName']}<br />
+						Major: 	{$row['major']}<br />
+						Graduation Year: {$row['gradDate']}<br />
+						Email: {$row['email']}</p>";
+						}
+					}
+					?>
 					<img class="eboard grayscale" align="right" src="Images/EBoard/George.png">
 					<h2 align="right" >President</h2>
 					<p align="right">
