@@ -19,6 +19,7 @@
 		</script>
 	</head>
 	<body>
+		<!--test-->
 		<div id="vid"><iframe width="640" height="480" name="action" frameborder="0" ></iframe></div>
 		<div id="inactive"></div>
 		<div id="container">
