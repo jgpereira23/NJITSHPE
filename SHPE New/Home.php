@@ -6,6 +6,7 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
+		<script src="paypal-button.min"></script>
 		<script type="text/javascript">
 
 			var _gaq = _gaq || [];
@@ -19,38 +20,38 @@
 		</script>
 	</head>
 	<body>
-		<div id="vid"><iframe width="640" height="480" name="action" frameborder="0" ></iframe></div>
+		<!--<div id="vid"><iframe width="640" height="480" name="action" frameborder="0"></iframe></div>-->
 		<div id="inactive"></div>
 		<div id="container">
 			<div class="bar" id="nav">
 				<div id="navbar">
-				<div id="logo"><a href="Home.html"><img src="Images/SHPElogo.png"></a></div>
+				<div id="logo"><a href="Home.php"><img src="Images/SHPElogo.png"></a></div>
 				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
 				<ul>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Scholarships.html">Scholarships</a>
+									<a href="Scholarships.php">Scholarships</a>
 								</li>
 								<li>
-									<a href="Internships.html">Internships</a>
+									<a href="Internships.php">Internships</a>
 								</li>
 								<li>
-									<a href="Miscellaneous.html">Miscellaneous</a>
+									<a href="Miscellaneous.php">Miscellaneous</a>
 								</li>
 							</ul>
 						</div>
-						<div id="current">OPPORTUNITIES</div>
+						OPPORTUNITIES
 					</li>	
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="CurrentEBoard.html">Current E-Board</a>
+									<a href="CurrentEBoard.php">Current E-Board</a>
 								</li>
 								<li>
-									<a href="Advisors.html">Advisors</a>
+									<a href="Advisors.php">Advisors</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -59,13 +60,13 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="MissionVision.html">Mission & Vision</a>
+									<a href="MissionVision.php">Mission & Vision</a>
 								</li>
 								<li>
-									<a href="History.html">History</a>
+									<a href="History.php">History</a>
 								</li>
 								<li>
-									<a href="Testimonials.html">Testimonials</a>
+									<a href="Testimonials.php">Testimonials</a>
 								</li>
 							</ul>
 						</div>
@@ -75,13 +76,13 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Calendar.html">Calendar</a>
+									<a href="Calendar.php">Calendar</a>
 								</li>
 								<li>
-									<a href="PastEvents.html">Past Events</a>
+									<a href="PastEvents.php">Past Events</a>
 								</li>
 								<li>
-									<a href="FutureEvents.html">Future Events</a>
+									<a href="FutureEvents.php">Future Events</a>
 								</li>
 							</ul>
 						</div>
@@ -91,19 +92,19 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="GeneralMeetings.html">General Meetings</a>
+									<a href="GeneralMeetings.php">General Meetings</a>
 								</li>
 								<li>
-									<a href="Events.html">Events</a>
+									<a href="Events.php">Events</a>
 								</li>
 							</ul>
 						</div>
 						GALLERY
 					</li>
 				</ul>
-				</div></div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;Miscellaneous</h1>
-					<h2>More info for this page will be coming soon!</h2>
+				</div></div><div class="bar" id="content"><div id="middle"></br>
+				<iframe width="490" height="276" src="http://www.youtube.com/embed/7td2Nt-Cvn8" frameborder="0" allowfullscreen></iframe>
+				<h2 align="center">Advance your professional development. Join us in Indianapolis for the SHPE National Conference this October!</h2>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
@@ -119,7 +120,8 @@
 						<td width="67%">
 							<h3>Latest Updates</h3>
 							<img class="UpImgs" id="UpImg1" src="Images/Updates-1.png"><img id="UpImg2" class="UpImgs" src="Images/Updates-1.png"><img class="UpImgs" id="UpImg3" src="Images/Updates-1.png">
-							<p class="Updates" id="UpdateTxt"></p>
+							<p class="Updates" id="UpdateTxt">&nbsp;</p>
+
 						</td>
 						<td width="33%">
 							<h3>General Info</h3>
@@ -128,7 +130,7 @@
 							General Meeting: Fridays 11:30AM Kupfrian 118</br>
 							<h3>Contact Us</h3>
 							<a href="mailto:njitshpe@gmail.com" target="_blank">Contact Us Via Email</a>
-							<a href="FAQ.html"><h3>FAQ</h3></a>
+							<a href="FAQ.php"><h3>FAQ</h3></a>
 						</td>
 					</tr>
 			</div>

@@ -125,9 +125,17 @@ text-decoration: none;
 	font-size: 1.3em;
 	color: #0F0750;
 	font-weight: normal;
+	line-height:1;
 }
+
+#middle h4{
+	color:#0F0750;
+	font-weight:normal;
+}
+
 #middle p{
 	font-size:.9em;
+	line-height:120%;
 }
 #nav{
 	width:30%;
@@ -207,7 +215,8 @@ text-decoration: none;
 }
 #footer{
 	z-index:3;
-	width: 100%;
+	left:0px;
+	right:0px;
 	height:175px;
 	background-color:black;
 }
@@ -215,7 +224,6 @@ text-decoration: none;
 	margin:0 auto;
 	padding:0px;
 	position:center;
-	background-color:black;
 	width: 925px;
 	height:100%;
 }

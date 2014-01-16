@@ -24,48 +24,49 @@
 		<div id="container">
 			<div class="bar" id="nav">
 				<div id="navbar">
-				<div id="logo"><a href="Home.html"><img src="Images/SHPElogo.png"></a></div>
+				<div id="logo"><a href="Home.php"><img src="Images/SHPElogo.png"></a></div>
 				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
 				<ul>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Scholarships.html">Scholarships</a>
+									<a href="Scholarships.php">Scholarships</a>
 								</li>
 								<li>
-									<a href="Internships.html">Internships</a>
+									<a href="Internships.php">Internships</a>
 								</li>
 								<li>
-									<a href="Miscellaneous.html">Miscellaneous</a>
+									<a href="Miscellaneous.php">Miscellaneous</a>
 								</li>
 							</ul>
 						</div>
-						<div id="current">OPPORTUNITIES</div>
+						OPPORTUNITIES
 					</li>	
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="CurrentEBoard.html">Current E-Board</a>
+									<a href="CurrentEBoard.php">Current E-Board</a>
 								</li>
 								<li>
-									<a href="Advisors.html">Advisors</a>
+									<a href="Advisors.php">Advisors</a>
 								</li>
 							</ul>
-						</div>E-BOARD
+						</div>
+						<div id="current">E-BOARD</div>
 					</li>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="MissionVision.html">Mission & Vision</a>
+									<a href="MissionVision.php">Mission & Vision</a>
 								</li>
 								<li>
-									<a href="History.html">History</a>
+									<a href="History.php">History</a>
 								</li>
 								<li>
-									<a href="Testimonials.html">Testimonials</a>
+									<a href="Testimonials.php">Testimonials</a>
 								</li>
 							</ul>
 						</div>
@@ -75,13 +76,13 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Calendar.html">Calendar</a>
+									<a href="Calendar.php">Calendar</a>
 								</li>
 								<li>
-									<a href="PastEvents.html">Past Events</a>
+									<a href="PastEvents.php">Past Events</a>
 								</li>
 								<li>
-									<a href="FutureEvents.html">Future Events</a>
+									<a href="FutureEvents.php">Future Events</a>
 								</li>
 							</ul>
 						</div>
@@ -91,10 +92,10 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="GeneralMeetings.html">General Meetings</a>
+									<a href="GeneralMeetings.php">General Meetings</a>
 								</li>
 								<li>
-									<a href="Events.html">Events</a>
+									<a href="Events.php">Events</a>
 								</li>
 							</ul>
 						</div>
@@ -102,11 +103,38 @@
 					</li>
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;Internships</h1>
-					<h2>Career Development Services</h2>
-					<p>- Career Development Services is a value–added contributor to the career planning and preparation of NJIT students and graduates. CDS is dedicated to continually improving our client services and to assuming leadership in the profession of career development.<br />
-					- CDS is a great tool every NJIT student should use. Easy navigation, useful information, and a huge audiance will maximize your opportunities.<br />
-					Website: <a href="http://www.njit.edu/cds/">http://www.njit.edu/cds/</a></p>
+					<h1>&nbsp;Executive Board of 2013-2014</h1>
+					<?php 
+					require("Scripts/connect.php");
+					
+					$positions = array("President", "Vice President", "Treasurer", "Secretary", "Event Coordinator", "Recruitment Chair", "Public Relations", "Academic Chair", "Webmaster");
+					$odd=0;
+					foreach($positions as $value){
+						$sql = "SELECT * FROM eboard e, user u WHERE u.userID = e.userID AND e.position='{$value}'";
+						
+						$result = mysql_query($sql);
+						
+						while($row = mysql_fetch_array($result)){
+							if($odd==1){
+								$align = "left";
+								$odd--;
+							}
+							else if($odd==0){
+								$align = "right";
+								$odd++;
+							}
+							if($row['link']==''){
+								$row['link']= 'Images/EBoardTest.png';
+							}
+							echo "<img class='eboard' align='{$align}' src='{$row['link']}'>";
+							echo "<h2 align='{$align}' >{$row['position']}</h2>";
+							echo "<p align='{$align}'>";
+							echo "Name: {$row['firstName']} {$row['lastName']}<br />Major: 	{$row['major']}<br />";
+							echo "Graduation Year: {$row['gradDate']}<br />";
+							echo "Email: {$row['email']}</p>";
+						}
+					}
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
@@ -131,7 +159,7 @@
 							General Meeting: Fridays 11:30AM Kupfrian 118</br>
 							<h3>Contact Us</h3>
 							<a href="mailto:njitshpe@gmail.com" target="_blank">Contact Us Via Email</a>
-							<a href="FAQ.html"><h3>FAQ</h3></a>
+							<a href="FAQ.php"><h3>FAQ</h3></a>
 						</td>
 					</tr>
 			</div>

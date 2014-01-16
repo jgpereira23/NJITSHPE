@@ -24,33 +24,33 @@
 		<div id="container">
 			<div class="bar" id="nav">
 				<div id="navbar">
-				<div id="logo"><a href="Home.html"><img src="Images/SHPElogo.png"></a></div>
+				<div id="logo"><a href="Home.php"><img src="Images/SHPElogo.png"></a></div>
 				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
 				<ul>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Scholarships.html">Scholarships</a>
+									<a href="Scholarships.php">Scholarships</a>
 								</li>
 								<li>
-									<a href="Internships.html">Internships</a>
+									<a href="Internships.php">Internships</a>
 								</li>
 								<li>
-									<a href="Miscellaneous.html">Miscellaneous</a>
+									<a href="Miscellaneous.php">Miscellaneous</a>
 								</li>
 							</ul>
 						</div>
-						OPPORTUNITIES
+						<div id="current">OPPORTUNITIES</div>
 					</li>	
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="CurrentEBoard.html">Current E-Board</a>
+									<a href="CurrentEBoard.php">Current E-Board</a>
 								</li>
 								<li>
-									<a href="Advisors.html">Advisors</a>
+									<a href="Advisors.php">Advisors</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -59,13 +59,13 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="MissionVision.html">Mission & Vision</a>
+									<a href="MissionVision.php">Mission & Vision</a>
 								</li>
 								<li>
-									<a href="History.html">History</a>
+									<a href="History.php">History</a>
 								</li>
 								<li>
-									<a href="Testimonials.html">Testimonials</a>
+									<a href="Testimonials.php">Testimonials</a>
 								</li>
 							</ul>
 						</div>
@@ -75,26 +75,26 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Calendar.html">Calendar</a>
+									<a href="Calendar.php">Calendar</a>
 								</li>
 								<li>
-									<a href="PastEvents.html">Past Events</a>
+									<a href="PastEvents.php">Past Events</a>
 								</li>
 								<li>
-									<a href="FutureEvents.html">Future Events</a>
+									<a href="FutureEvents.php">Future Events</a>
 								</li>
 							</ul>
 						</div>
-						<div id="current">EVENTS</div>
+						EVENTS
 					</li>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="GeneralMeetings.html">General Meetings</a>
+									<a href="GeneralMeetings.php">General Meetings</a>
 								</li>
 								<li>
-									<a href="Events.html">Events</a>
+									<a href="Events.php">Events</a>
 								</li>
 							</ul>
 						</div>
@@ -102,11 +102,25 @@
 					</li>
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;Past Events</h1>
-					<h2>9/18 Fiesta a la NJIT</h2>
-					<h2>9/20 SHPE 101</h2>
-					<h2>9/23 Havana Night</h2>
-					<h2>9/25 Inroads</h2>
+					<h1>&nbsp;Internships</h1>
+					<!-- script goes here -->
+					<?php
+					require("Scripts/connect.php");
+					
+					$query = "SELECT * FROM opportunities WHERE type = 'internship'";
+					
+					$result = mysql_query($query);
+					
+					while($row = mysql_fetch_array($result)){
+						$start_time=date("F jS \, Y", strtotime($row['startDate']));
+						$end_time=date("F jS \, Y", strtotime($row['endDate']));
+					
+						echo "<h2>".$row['title']."</h1>";
+						echo "<p>".$row['description']." </p>";
+						echo "<h4><i> ".$start_time." - ".$end_time."<i></h4>";
+						echo "<a href='".$row['link']."' ><b>Click Here to Apply</b></a></br></br>";
+						}
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
@@ -131,7 +145,7 @@
 							General Meeting: Fridays 11:30AM Kupfrian 118</br>
 							<h3>Contact Us</h3>
 							<a href="mailto:njitshpe@gmail.com" target="_blank">Contact Us Via Email</a>
-							<a href="FAQ.html"><h3>FAQ</h3></a>
+							<a href="FAQ.php"><h3>FAQ</h3></a>
 						</td>
 					</tr>
 			</div>

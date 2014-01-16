@@ -7,6 +7,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
 		<script type="text/javascript">
+
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-35750639-1']);
 			_gaq.push(['_trackPageview']);
@@ -18,38 +19,25 @@
 		</script>
 	</head>
 	<body>
-		<div id="vid"><iframe width="640" height="480" name="action" frameborder="0" ></iframe></div>
-		<div id="inactive">
-		</div>
-		<div id="gallery">
-			<div id="leftArrow">
-				&nbsp;&nbsp;<img class="arrow" src="Images/Gallery/LeftArrow.png">
-			</div>
-			<img class="canvas" src="Images/EBoard/1.png">
-			<div id="rightArrow">
-				&nbsp;<img class="arrow" src="Images/Gallery/RightArrow.png">
-			</div>
-			<div  id="exit">
-				<img src="Images/Gallery/Exit.png">
-			</div>
-		</div>
+		<div id="vid"><iframe id="videos" width="640" height="480" name="action" frameborder="0" ></iframe></div>
+		<div id="inactive"></div>
 		<div id="container">
 			<div class="bar" id="nav">
 				<div id="navbar">
-				<div id="logo"><a href="Home.html"><img src="Images/SHPElogo.png"></a></div>
+				<div id="logo"><a href="Home.php"><img src="Images/SHPElogo.png"></a></div>
 				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
 				<ul>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Scholarships.html">Scholarships</a>
+									<a href="Scholarships.php">Scholarships</a>
 								</li>
 								<li>
-									<a href="Internships.html">Internships</a>
+									<a href="Internships.php">Internships</a>
 								</li>
 								<li>
-									<a href="Miscellaneous.html">Miscellaneous</a>
+									<a href="Miscellaneous.php">Miscellaneous</a>
 								</li>
 							</ul>
 						</div>
@@ -59,10 +47,10 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="CurrentEBoard.html">Current E-Board</a>
+									<a href="CurrentEBoard.php">Current E-Board</a>
 								</li>
 								<li>
-									<a href="Advisors.html">Advisors</a>
+									<a href="Advisors.php">Advisors</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -71,13 +59,13 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="MissionVision.html">Mission & Vision</a>
+									<a href="MissionVision.php">Mission & Vision</a>
 								</li>
 								<li>
-									<a href="History.html">History</a>
+									<a href="History.php">History</a>
 								</li>
 								<li>
-									<a href="Testimonials.html">Testimonials</a>
+									<a href="Testimonials.php">Testimonials</a>
 								</li>
 							</ul>
 						</div>
@@ -87,35 +75,35 @@
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="Calendar.html">Calendar</a>
+									<a href="Calendar.php">Calendar</a>
 								</li>
 								<li>
-									<a href="PastEvents.html">Past Events</a>
+									<a href="PastEvents.php">Past Events</a>
 								</li>
 								<li>
-									<a href="FutureEvents.html">Future Events</a>
+									<a href="FutureEvents.php">Future Events</a>
 								</li>
 							</ul>
 						</div>
-						EVENTS
+						<div id="current">EVENTS</div>
 					</li>
 					<li>
 						<div class="submenu">
 							<ul>
 								<li>
-									<a href="GeneralMeetings.html">General Meetings</a>
+									<a href="GeneralMeetings.php">General Meetings</a>
 								</li>
 								<li>
-									<a href="Events.html">Events</a>
+									<a href="Events.php">Events</a>
 								</li>
 							</ul>
 						</div>
-						<div id="current">GALLERY</div>
+						GALLERY
 					</li>
 				</ul>
 				</div></div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;General Meetings</h1>
-					<h2><div id="galpic">More info for this page will be coming soon!</div></h2>
+					<h1>&nbsp;Calendar</h1>
+					<iframe src="https://www.google.com/calendar/embed?title=NJIT%20SHPE&amp;showPrint=0&amp;showCalendars=0&amp;height=430&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=njitshpe%40gmail.com&amp;color=%23182C57&amp;ctz=America%2FNew_York" style=" border-width:0 " width="490" height="430" frameborder="0" scrolling="no"></iframe>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
@@ -140,7 +128,7 @@
 							General Meeting: Fridays 11:30AM Kupfrian 118</br>
 							<h3>Contact Us</h3>
 							<a href="mailto:njitshpe@gmail.com" target="_blank">Contact Us Via Email</a>
-							<a href="FAQ.html"><h3>FAQ</h3></a>
+							<a href="FAQ.php"><h3>FAQ</h3></a>
 						</td>
 					</tr>
 			</div>

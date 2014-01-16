@@ -21,11 +21,11 @@
 	</head>
 	<body>
 		<div id="container">
-			<a href="Home.html"><img src="Images/SHPElogoL.png"></a>
+			<a href="Home.php"><img src="Images/SHPElogoL.png"></a>
 			<div id="donateText">Help us host our 22nd annual Gala Banquet at Iberia's<br>
 				<script src="paypal-button.min.js?merchant=ADXEK5HUVXVZU" data-button="donate"></script>
 				<div class="buttons">
-					<a href="Home.html">Skip to Site</a>
+					<a href="Home.php">Skip to Site</a>
 				</div>
 			</div>
 		</div>
