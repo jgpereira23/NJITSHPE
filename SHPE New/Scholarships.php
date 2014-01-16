@@ -113,9 +113,12 @@
 					
 					
 					while($row = mysql_fetch_array($result)){
+						$start_time=date("F jS \, Y", strtotime($row['startDate']));
+						$end_time=date("F jS \, Y", strtotime($row['endDate']));
+					
 						echo "<h2>".$row['title']."</h1>";
 						echo "<p>".$row['description']." </p>";
-						echo "<h4><i> ".$row['startDate']." through ".$row['endDate']."<i></h4>";
+						echo "<h4><i> ".$start_time." - ".$end_time."<i></h4>";
 						echo "<a href='".$row['link']."' ><b>Click Here to Apply</b></a></br></br>";
 						}
 					?>
