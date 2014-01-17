@@ -4,10 +4,13 @@
 		<title>NJIT SHPE</title>
 		<link rel="shortcut icon" href="images/images/favicon.ico" >
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
+		<link href="lightbox2-master/css/lightbox.css" rel="stylesheet" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
+		<script src="lightbox2-master/js/jquery-1.10.2.min.js"></script>
+		<script src="lightbox2-master/js/lightbox-2.6.min.js"></script>
+		
 		<script type="text/javascript">
-
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-35750639-1']);
 			_gaq.push(['_trackPageview']);
@@ -104,7 +107,12 @@
 				</div></div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Events</h1>
 					
-					<?php
+					<a href="lightbox2-master/img/demopage/image-1.jpg" data-lightbox="example-1" title="my caption">image #1<img src="lightbox2-master/img/demopage/thumb-1.jpg" alt="thumb-1" width="150" height="150"> </a>
+					
+					
+					
+					<!-- 
+					?php
 					require("Scripts/connect.php");
 					
 					$sql = "SELECT * FROM album;";
@@ -142,7 +150,7 @@
 					echo "</div>";
 					
 					?>
-					
+					-->
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
