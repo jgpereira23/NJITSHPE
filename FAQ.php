@@ -24,85 +24,13 @@
 
 		<div id="container">
 			<div class="bar" id="nav">
-				<div id="navbar">
-				<div id="logo"><a href="Home.php"><img src="Images/SHPElogo.png"></a></div>
-				<!--<a href="http://www.youtube.com/embed/BYW6C44zo24?autoplay=0" target="action">-->
-				<ul>
-					<li>
-						<div class="submenu">
-							<ul>
-								<li>
-									<a href="Scholarships.php">Scholarships</a>
-								</li>
-								<li>
-									<a href="Internships.php">Internships</a>
-								</li>
-								<li>
-									<a href="Miscellaneous.php">Miscellaneous</a>
-								</li>
-							</ul>
-						</div>
-						OPPORTUNITIES
-					</li>	
-					<li>
-						<div class="submenu">
-							<ul>
-								<li>
-									<a href="CurrentEBoard.php">Current E-Board</a>
-								</li>
-								<li>
-									<a href="Advisors.php">Advisors</a>
-								</li>
-							</ul>
-						</div>E-BOARD
-					</li>
-					<li>
-						<div class="submenu">
-							<ul>
-								<li>
-									<a href="MissionVision.php">Mission & Vision</a>
-								</li>
-								<li>
-									<a href="History.php">History</a>
-								</li>
-								<li>
-									<a href="Testimonials.php">Testimonials</a>
-								</li>
-							</ul>
-						</div>
-						ABOUT US
-					</li>
-					<li>
-						<div class="submenu">
-							<ul>
-								<li>
-									<a href="Calendar.php">Calendar</a>
-								</li>
-								<li>
-									<a href="PastEvents.php">Past Events</a>
-								</li>
-								<li>
-									<a href="FutureEvents.php">Future Events</a>
-								</li>
-								</li>
-							</ul>
-						</div>
-						EVENTS
-					</li>
-					<li><div class="submenu">
-							<ul>
-								<li>
-									<a href="GeneralMeetings.php">General Meetings</a>
-								</li>
-								<li>
-									<a href="Events.php">Events</a>
-								</li>
-							</ul>
-						</div>
-						GALLERY
-					</li>
-				</ul>
-				</div></div><div class="bar" id="content"><div id="middle">
+				<?php
+					session_start();
+					$_SESSION['curr'] = 0;
+					$display = include "Scripts/navBar.php";
+					echo $display;
+				?>
+			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Frequently Asked Questions</h1>
 					<h2>More info for this page will be coming soon!</h2>
 				</div></div><div class="bar" id="sidebar">
