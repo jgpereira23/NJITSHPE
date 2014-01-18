@@ -34,6 +34,7 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Events</h1>
+<<<<<<< HEAD:Events.php
 					
 					<a href="lightbox2-master/img/demopage/image-1.jpg" data-lightbox="example-1" title="my caption">image #1<img src="lightbox2-master/img/demopage/thumb-1.jpg" alt="thumb-1" width="150" height="150"> </a>
 					
@@ -79,6 +80,22 @@
 					
 					?>
 					-->
+=======
+					<!--script that'll display pictures here
+
+					require(Scripts/displayPhotos.php);
+					
+					-->
+					<a href="Images/HHM/pic1.jpg" data-lightbox="HHM" title="pic_1"><img src="Images/HHM/pic1.jpg" alt="thumb-1" width="150" height="150"></br>HHM</a>
+					<a href="Images/HHM/pic2.jpg" data-lightbox="HHM" title="pic_2"></a>
+					<a href="Images/HHM/pic3.jpg" data-lightbox="HHM" title="pic_3"></a>
+					<a href="Images/HHM/pic4.jpg" data-lightbox="HHM" title="pic_4"></a>
+					<a href="Images/HHM/pic5.jpg" data-lightbox="HHM" title="pic_5"></a>
+					<a href="Images/HHM/pic6.jpg" data-lightbox="HHM" title="pic_6"></a>
+					
+					
+					
+>>>>>>> Multiple Changes:Events.php
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>

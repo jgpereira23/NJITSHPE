@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 	session_start();
+=======
+	//session_start();
+>>>>>>> Multiple Changes
 	if($_SESSION['curr']==1){
 		return "<div id='navbar'>
 					<div id='logo'><a href='Home.php'><img src='Images/SHPElogo.png'></a></div>
