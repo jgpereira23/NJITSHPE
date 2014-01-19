@@ -34,63 +34,10 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Events</h1>
-					<table>
-						<tr>
-							<td>
-							<a href="lightbox2-master/img/demopage/image-1.jpg" data-lightbox="example-1" title="my caption"><img src="lightbox2-master/img/demopage/thumb-1.jpg" alt="thumb-1" width="150" height="150"></br>Caption </a></td>
-							<td>
-							<a href="Images/HHM/pic1.jpg" data-lightbox="HHM" title="pic_1"><img src="Images/HHM/pic1.jpg" alt="thumb-1" width="150" height="150"></br>HHM</a>
-							<a href="Images/HHM/pic2.jpg" data-lightbox="HHM" title="pic_2"></a>
-							<a href="Images/HHM/pic3.jpg" data-lightbox="HHM" title="pic_3"></a>
-							<a href="Images/HHM/pic4.jpg" data-lightbox="HHM" title="pic_4"></a>
-							<a href="Images/HHM/pic5.jpg" data-lightbox="HHM" title="pic_5"></a>
-							<a href="Images/HHM/pic6.jpg" data-lightbox="HHM" title="pic_6"></a></td>
-					</table>
-					<!-- 
-					?php
-					require("Scripts/connect.php");
 					
-					$sql = "SELECT * FROM album;";
-					$maxCol = 3;
-					$result = mysql_query($sql);
-					
-					echo "<div id='right'>";
-					//Open Table
-					echo"<table cellpadding='5' cols='2'>";
-					//set index var to track record count
-					$recIdx=0;
-					while($row = mysql_fetch_array($result)){
-						$recIdx++;
-						//Open new row if needed
-						if($recIdx%$maxCol ==1){
-							echo "<tr>\n";
-						}
-						//Display Album
-						
-						echo "<td>";
-						echo "<img src='Images\Gallery\albumcover.png' width='100px' height='100px'></br>";
-						echo $row['name'];
-						echo "</td>\n";
-						//Close row if needed
-						if($recIdx % $maxCol ==0){
-							echo "</tr>\n";
-						}
-					}
-					//Close last row if needed
-					if($recIdx % $maxCol == 0){
-						echo "</tr>\n";
-					}
-					//close table and div
-					echo "</table>";
-					echo "</div>";
-					
+					<?php
+					require('Scripts/displayPhotos.php');
 					?>
-					-->
-					<!--script that'll display pictures here
-
-					require(Scripts/displayPhotos.php);
-					
-					-->
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
