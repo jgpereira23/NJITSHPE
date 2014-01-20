@@ -31,10 +31,9 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Past Events</h1>
-					<h2>9/18 Fiesta a la NJIT</h2>
-					<h2>9/20 SHPE 101</h2>
-					<h2>9/23 Havana Night</h2>
-					<h2>9/25 Inroads</h2>
+					<?php
+						require('Scripts/displayEvents.php');
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
