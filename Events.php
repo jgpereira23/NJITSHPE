@@ -34,9 +34,8 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Events</h1>
-					
 					<?php
-					require('Scripts/displayPhotos.php');
+						require("Scripts/displayPhotos.php");
 					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">

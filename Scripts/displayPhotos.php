@@ -26,12 +26,12 @@ while($aRow = mysql_fetch_array($result1)){
 		//if its the first photo then display with picture
 		if($firstPic == true){
 			echo "<td>";
-			echo "<a href='{$aRow['link']}/{$pRow['link']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['link']}' alt='thumb-1' width='150' height='150'></br>{$aRow['name']} </a>";
+			echo "<a href='{$aRow['link']}/{$pRow['extention']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['extention']}' alt='thumb-1' width='150' height='150'></br>{$aRow['name']} </a>";
 			echo "</td>\n";
 			$firstPic = false;
 		}
 		echo "<td>";
-		echo "<a href='{$aRow['link']}/{$pRow['link']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'></a>";
+		echo "<a href='{$aRow['link']}/{$pRow['extention']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'></a>";
 		echo "<td>\n";
 		
 	}
@@ -43,7 +43,7 @@ while($aRow = mysql_fetch_array($result1)){
 }
 
 //Close row if needed
-if($aCount % $colMax ==0){
+if($aCount!=3){
 	echo "</tr>\n";
 	}
 	
