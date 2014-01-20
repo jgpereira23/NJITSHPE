@@ -26,7 +26,7 @@ while($aRow = mysql_fetch_array($result1)){
 		//if its the first photo then display with picture
 		if($firstPic == true){
 			echo "<td>";
-			echo "<a href='{$aRow['link']}/{$pRow['extention']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['extention']}' alt='thumb-1' width='150' height='150'></br>{$aRow['name']} </a>";
+			echo "<a href='{$aRow['link']}/{$pRow['extension']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['extention']}' alt='thumb-1' width='150' height='150'></br>{$aRow['name']} </a>";
 			echo "</td>\n";
 			$firstPic = false;
 		}
