@@ -6,9 +6,9 @@ $query1 = "SELECT * FROM album;";
 $result1 = mysql_query($query1);
 //setting album count and column count
 $aCount = 0;
-$colMax = 3;
+$colMax = 2;
 //opening a table
-echo "<table cellpadding='5' cols='2'>";
+echo "<table align='center' cols='2'>";
 //loop through the album records
 while($aRow = mysql_fetch_array($result1)){
 	$firstPic=true;
@@ -22,28 +22,27 @@ while($aRow = mysql_fetch_array($result1)){
 	$aCount++;
 	//loop through the pictures records for each album
 	while($pRow = mysql_fetch_array($result2)){
-		echo "<tr>";
 		//if its the first photo then display with picture
 		if($firstPic == true){
 			echo "<td>";
-			echo "<a href='{$aRow['link']}/{$pRow['extension']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['extention']}' alt='thumb-1' width='150' height='150'></br>{$aRow['name']} </a>";
-			echo "</td>\n";
+			echo "<a href='{$aRow['link']}/{$pRow['extension']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'><img src='{$aRow['link']}/{$pRow['extension']}' alt='thumb-1' width='150' height='150'></br><center><b>{$aRow['name']} </b></center></a>";
+			echo "</td>";
 			$firstPic = false;
 		}
 		echo "<td>";
-		echo "<a href='{$aRow['link']}/{$pRow['extention']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'></a>";
-		echo "<td>\n";
+		echo "<a href='{$aRow['link']}/{$pRow['extension']}' data-lightbox='{$aRow['name']}' title='{$pRow['caption']}'></a>";
+		echo "<td>";
 		
 	}
 	//Close row if needed
-	if($aCount==3){
+	if($aCount==2){
 		echo "</tr>\n";
 		$aCount=0;
 	}
 }
 
 //Close row if needed
-if($aCount!=3){
+if($aCount<2){
 	echo "</tr>\n";
 	}
 	
