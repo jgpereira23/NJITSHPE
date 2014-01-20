@@ -63,6 +63,7 @@
 						}
 					}
 					?>
+					<BR>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
