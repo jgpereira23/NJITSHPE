@@ -32,6 +32,7 @@
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Past Events</h1>
 					<?php
+						$_SESSION['status']="past";
 						require('Scripts/displayEvents.php');
 					?>
 				</div></div><div class="bar" id="sidebar">

@@ -31,7 +31,10 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;Future Events</h1>
-					<h2>More information for this page will be coming soon!</h2>
+					<?php
+						$_SESSION['status']="future";
+						require('Scripts/displayEvents.php');
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
