@@ -8,7 +8,7 @@
 		<script src="jscript.js"></script>
 		<script src="paypal-button.min"></script>
 		<script type="text/javascript">
-			function validateForm1()
+			function validateForm1(frompage, topage)
 			{
 				var x=document.forms["Register"]["firstName"].value;
 				if (x==null || x=="")
@@ -79,9 +79,17 @@
 					alert("Legal Status must be selected");
 					return false;
 				}
-				pageChange(1,2);
+				var page=document.getElementById('formpage_'+frompage);
+				if (!page) return false;
+				page.style.visibility='hidden';
+				page.style.display='none';
+				page=document.getElementById('formpage_'+topage);
+				if (!page) return false;
+				page.style.display='block';
+				page.style.visibility='visible';
+				return true;
 			}
-			function validateForm2(){
+			function validateForm2(frompage, topage){
 				var x=document.forms["Register"]["address"].value;
 				if (x==null || x=="")
 				{
@@ -115,17 +123,29 @@
 					return false;
 				}
 				x=document.forms["Register"]["state"].value;
-				if(/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(x){
+				if(/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(x)){
 					alert("Zip code is not valid");
 					return false;
 				}
+				var page=document.getElementById('formpage_'+frompage);
+				if(validateMyForm()){
+					if (!page) return false;
+					page.style.visibility='hidden';
+					page.style.display='none';
+					page=document.getElementById('formpage_'+topage);
+					if (!page) return false;
+					page.style.display='block';
+					page.style.visibility='visible';
+				}
+				return true;
 			}
-			function pageChange(frompage, topage) {
+		</script>
+		<script type="text/javascript">
+			pageChange(frompage,topage){
 				var page=document.getElementById('formpage_'+frompage);
 				if (!page) return false;
 				page.style.visibility='hidden';
 				page.style.display='none';
-				
 				page=document.getElementById('formpage_'+topage);
 				if (!page) return false;
 				page.style.display='block';
@@ -185,7 +205,7 @@
 								<option value="Other">Other</option>
 							</select>
 							<BR><BR>
-							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm1();"><br>
+							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm1(1,2);"><br>
 						</div>
 						<div id="formpage_2"  style="visibility: hidden; display: none;">
 							<CENTER><h2>Permanent Address</h2></CENTER>
@@ -496,12 +516,12 @@
 								<option value="Zimbabwe">Zimbabwe</option>
 							</select>
 							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" required><BR><BR>
-							<input type="button" class="right" style="float:left;" value="Back" onclick="pagechange(2,1);">
-							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm2();"><br>
+							<input type="button" class="right" style="float:left;" value="Back" onclick="pageChange(2,1);">
+							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm2(2,3);"><br>
 						</div>
 						<div id="formpage_3" style="visibility: hidden; display: none;">
 							<BR><BR>
-							<input type="button" class="right" style="float:left;" value="Back" onclick="pagechange(3,2);">
+							<input type="button" class="right" style="float:left;" value="Back" onclick="pageChange(3,2);">
 							<input type="submit" class="right" style="float:right;" value="Submit"><br>
 						</div>
 				</div></div><div class="bar" id="sidebar">
