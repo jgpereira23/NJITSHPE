@@ -3,9 +3,8 @@ require('connect.php');
 function displayEvents($status){
 	switch($status){
 	case "past":
-		$query = "SELECT startTime, endTime, name, location, description, link FROM event WHERE endTime<CURRENT_TIMESTAMP;";
+		$query = "SELECT startTime, endTime, name, location, description, link FROM event WHERE endTime<CURRENT_TIMESTAMP ORDER BY startTime;";
 		$result = mysql_query($query);
-		echo mysql_num_rows($result);
 		echo "<table cellpadding='5'>";
 		while($eRow = mysql_fetch_array($result)){
 			echo "<tr>";
@@ -16,10 +15,10 @@ function displayEvents($status){
 		echo "</table>";
 		break;
 	case "future":
-		$query = "SELECT startTime, endTime, name, location, description, link FROM event WHERE startTime>CURRENT_TIMESTAMP;";
+		$query = "SELECT startTime, endTime, name, location, description, link FROM event WHERE startTime>CURRENT_TIMESTAMP ORDER BY startTime;";
 		$result = mysql_query($query);
 		if(mysql_num_rows($result) == 0){
-			echo "<h2>There are no Events Coming Up for now :(</h2>";
+			echo "<h2>There are no events coming up for now </h2>";
 		}
 		echo "<table cellpadding='5'>";
 		while($eRow = mysql_fetch_array($result)){
