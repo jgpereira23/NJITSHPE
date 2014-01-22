@@ -31,7 +31,10 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;General Meetings</h1>
-					<h2><div id="galpic">More info for this page will be coming soon!</div></h2>
+					<?php
+					$_SESSION['status']='gm';
+					require('Scripts/displayPhotos.php');
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>

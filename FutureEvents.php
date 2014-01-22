@@ -49,8 +49,9 @@
 					<tr>
 						<td width="67%">
 							<h3>Latest Updates</h3>
-							<img class="UpImgs" id="UpImg1" src="Images/Updates-1.png"><img id="UpImg2" class="UpImgs" src="Images/Updates-1.png"><img class="UpImgs" id="UpImg3" src="Images/Updates-1.png">
-							<p class="Updates" id="UpdateTxt"></p>
+							<?php
+							require('Scripts/displayUpdates.php');
+							?>
 						</td>
 						<td width="33%">
 							<h3>General Info</h3>

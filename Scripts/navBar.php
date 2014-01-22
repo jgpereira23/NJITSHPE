@@ -69,9 +69,6 @@
 						<div class='submenu'>
 							<ul>
 								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
-								<li>
 									<a href='Events.php'>Events</a>
 								</li>
 							</ul>
@@ -149,9 +146,6 @@
 					<li>
 						<div class='submenu'>
 							<ul>
-								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
 								<li>
 									<a href='Events.php'>Events</a>
 								</li>
@@ -231,8 +225,6 @@
 						<div class='submenu'>
 							<ul>
 								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
 								<li>
 									<a href='Events.php'>Events</a>
 								</li>
@@ -312,9 +304,6 @@
 						<div class='submenu'>
 							<ul>
 								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
-								<li>
 									<a href='Events.php'>Events</a>
 								</li>
 							</ul>
@@ -393,9 +382,6 @@
 						<div class='submenu'>
 							<ul>
 								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
-								<li>
 									<a href='Events.php'>Events</a>
 								</li>
 							</ul>
@@ -473,9 +459,6 @@
 					<li>
 						<div class='submenu'>
 							<ul>
-								<li>
-									<a href='GeneralMeetings.php'>General Meetings</a>
-								</li>
 								<li>
 									<a href='Events.php'>Events</a>
 								</li>
