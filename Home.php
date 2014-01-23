@@ -518,6 +518,7 @@
 							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm2(2,3);"><br>
 						</div>
 						<div id="formpage_3" style="visibility: hidden; display: none;">
+							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" required><BR><BR>
 							<BR><BR>
 							<input type="button" class="right" style="float:left;" value="Back" onclick="validateForm2(3,2);">
 							<input type="submit" class="right" style="float:right;" value="Submit"><br>

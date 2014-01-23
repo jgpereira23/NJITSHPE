@@ -28,7 +28,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -106,7 +106,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div><div id='current'>E-BOARD</div>
@@ -184,7 +184,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -263,7 +263,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -341,7 +341,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div>E-BOARD
@@ -419,7 +419,7 @@
 									<a href='CurrentEBoard.php'>Current E-Board</a>
 								</li>
 								<li>
-									<a href='Advisors.php'>Advisors</a>
+									<a href='Advisers.php'>Advisers</a>
 								</li>
 							</ul>
 						</div>E-BOARD

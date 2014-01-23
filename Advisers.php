@@ -30,16 +30,16 @@
 					echo $display;
 				?>
 			</div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;NJIT SHPE Advisors</h1>
-					<img class="eboard grayscale" align="right" src="Images/EBoardTest.png">
-					<h2 align="right" >Advisor</h2>
+					<h1>&nbsp;NJIT SHPE Advisers</h1>
+					<img class="eboard" align="right" src="Images/EBoardTest.png">
+					<h2 align="right" >Adviser</h2>
 					<p align="right">
 						Name: Maria Oquendo<br />
 						EOP Assistant Director for Counseling Services Juniors<br />
 						Email: maria.l.oquendo@njit.edu
 					</p>
-					<img class="eboard grayscale" align="left" src="Images/EBoard/Nisha.png">
-					<h2 align="left" >Advisor</h2>
+					<img class="eboard" align="left" src="Images/EBoard/Nisha.png">
+					<h2 align="left" >Adviser</h2>
 					<p align="left">
 						Name: Nisha Reyes<br />
 						SSSP Assistant Director <br />
