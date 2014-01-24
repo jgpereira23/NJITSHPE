@@ -50,7 +50,7 @@
 						<td width="67%">
 							<h3>Latest Updates</h3>
 							<?php
-							require('Scripts/displayUpdates.php');
+							//require('Scripts/displayUpdates.php');
 							?>
 						</td>
 						<td width="33%">
