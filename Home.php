@@ -105,13 +105,18 @@
 				x=document.forms["Register"]["state"].value;
 				if (x==null || x=="")
 				{
-					alert("Gender must be selected");
+					alert("State must be selected");
+					return false;
+				}
+				x=document.forms["Register"]["postalCode"].value;
+				if (x.length!=5) {
+					alert("Please enter a valid 5 digit zip code");
 					return false;
 				}
 				var y=document.forms["Register"]["country"].value;
 				if (x==null || x=="")
 				{
-					alert("Gender must be selected");
+					alert("Country must be selected");
 					return false;
 				}
 				if(x=="Not in US" && y=="United States of America"){
@@ -120,11 +125,6 @@
 				}
 				if(x!="Not in US" && y!="United States of America"){
 					alert("Country must be US if state is in US");
-					return false;
-				}
-				x=document.forms["Register"]["postalCode"].value;
-				if (x.length!=5) {
-					alert("Please enter a valid 5 digit zip code");
 					return false;
 				}
 				var page=document.getElementById('formpage_'+frompage);
@@ -137,17 +137,67 @@
 				page.style.visibility='visible';
 				return true;
 			}
-		</script>
-		<script type="text/javascript">
-			pageChange(frompage,topage){
-				var page=document.getElementById('formpage_'+frompage);
-				if (!page) return false;
-				page.style.visibility='hidden';
-				page.style.display='none';
-				page=document.getElementById('formpage_'+topage);
-				if (!page) return false;
-				page.style.display='block';
-				page.style.visibility='visible';
+			function validateForm3(){
+				x=document.forms["Register"]["degree"].value;
+				if (x==null || x=="")
+				{
+					alert("Degree must be selected");
+					return false;
+				}
+				x=document.forms["Register"]["major"].value;
+				if (x==null || x=="")
+				{
+					alert("Major must be selected");
+					return false;
+				}
+				x=document.forms["Register"]["gradDate"].value;
+				if (x==null || x=="")
+				{
+					alert("Expected Graduation must be selected");
+					return false;
+				}
+				x=document.forms["Register"]["gradeLevel"].value;
+				if (x==null || x=="")
+				{
+					alert("Grade Level must be selected");
+					return false;
+				}
+				var chk_gpa = /^[0]|[0-3]\.(\d?\d?)|[4].[0]$/;
+				x=document.forms["Register"]["gpa"].value;
+				if (x.length!=3 || !chk_gpa.test(x)) {
+					alert("Please enter GPA in correct format. i.e. 3.3");
+					return false;
+				}
+				x=document.forms["Register"]["password"].value;
+				if(x.length<6){
+					alert("Password needs to be between 6 and 16 characters")
+				}
+				var y=document.forms["Register"]["password2"].value;
+				if((y!="" || y!=null) && y!=x){
+					alert("Passwords do not match!")
+				}
+				var arr1 = new Array;
+				x=document.forms["Register"]["resumeLink"].value;
+				if(x!="" && x!=null){
+					arr1 = x.split("\\");
+					var len = arr1.length;
+					var img1 = arr1[len-1];
+					var filext = img1.substring(img1.lastIndexOf(".")+1);
+					if(filext != "pdf" && filext != "PDF")
+					{
+						alert("Please upload a PDF file for your resume")
+						return false;
+					}
+					if (typeof FileReader !== "undefined") {
+						var size = document.getElementById('resumeLink').files[0].size;
+						// check file size
+						if(size>20000000){
+							alert("This file is too large");
+							return false;
+						}
+					}
+				}
+				document.Register.submit();
 				return true;
 			}
 		</script>
@@ -172,26 +222,28 @@
 					$_SESSION['curr'] = 0;
 					$display = include "Scripts/navBar.php";
 					echo $display;
+					//ARDLzxCUOx8hwOxJLVB1Wq7i2sk7ukGmY2WcKOGGOMFG-PMIZdpOwAkfM2Xx
+					//ENRrsxCzB9SAdolJ77Zb5m6QgBHeVv7xhDnnT7lp3IcADIWNmcglE6mblTSl
 				?>
-			</div><div class="bar" id="content"><div id="middle"></br>
+			</div><div class="bar" id="content"><div id="middle" style="min-height:312px;></br>
 				<p style="margin-left=5px">
-					<FORM name="Register" METHOD=POST ACTION="Scripts/signup.php">
+					<FORM name="Register" METHOD=POST ACTION="Scripts/registerUser.php" enctype="multipart/form-data">
 						<div id="formpage_1" style="visibility: visible; display: block;">
 							<CENTER><h2>Personal Information</h2></CENTER>
-							<INPUT class="input" type="text" placeholder="First Name" name="firstName" size="20" required> &nbsp &nbsp &nbsp 
+							<INPUT class="input" type="text" placeholder="First Name" name="firstName" size="20" > &nbsp &nbsp &nbsp 
 							<INPUT class="input" type="text" placeholder="MI" name="middleName" value="" size="1" maxlength="1"> &nbsp &nbsp &nbsp 
-							<INPUT class="input" name="lastName" placeholder="Last Name" size="20" required><BR><BR>
-							<p><select name="gender" required>
+							<INPUT class="input" name="lastName" placeholder="Last Name" size="20" ><BR><BR>
+							<p><select name="gender" >
 								<option value="" disabled selected>Gender</option>
 								<option value="F">Female</option>
 								<option value="M">Male</option>
 							</select> &nbsp  &nbsp &nbsp 
-							Birthday: &nbsp <INPUT type="date" name="dateOfBirth" value="birthdate" required>
+							<label for="dateOfBirth">Birthday:</label> &nbsp <INPUT type="date" name="dateOfBirth" value="birthdate" >
 							<BR><BR> </p>
-							<INPUT class="input" type ="email" placeholder=" E-mail" name="email" value="" size="18" required>&nbsp &nbsp &nbsp 
+							<INPUT class="input" type ="email" placeholder=" E-mail" name="email" value="" size="18" >&nbsp &nbsp &nbsp 
 							<input type="tel" placeholder="Phone Number" name="number"><BR><BR>
-							<INPUT class="input" name="ethnicity" placeholder="Ethnicity (Nationality)" size="20" required> &nbsp &nbsp &nbsp 
-							<select id="legalStatus" name="legalStatus" required>
+							<INPUT class="input" name="ethnicity" placeholder="Ethnicity (Nationality)" size="20" > &nbsp &nbsp &nbsp 
+							<select id="legalStatus" name="legalStatus" >
 								<option value="" disabled selected>Legal Status</option>
 								<option value="U.S. Citizen">U.S. Citizen</option>
 								<option value="Permanent Resident">Permanent Resident</option>
@@ -203,13 +255,13 @@
 								<option value="Other">Other</option>
 							</select>
 							<BR><BR>
-							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm1(1,2);"><br>
+							<input type="button" class ="form right" value="Next" onclick="validateForm1(1,2);"><br>
 						</div>
 						<div id="formpage_2"  style="visibility: hidden; display: none;">
 							<CENTER><h2>Permanent Address</h2></CENTER>
-							<INPUT class="input" type="text" placeholder="Street Address" name="address" required>
-							<INPUT class="input" type="text" name="city" placeholder="City" size="15" required>
-							<select name="state" required>
+							<INPUT class="input" type="text" placeholder="Street Address" name="address" >&nbsp &nbsp &nbsp
+							<INPUT class="input" type="text" name="city" placeholder="City" size="15" ><BR><BR>
+							<select name="state" >
 								<option value="" disabled selected>State</option>
 								<option value="Not in US">Not in US</option>
 								<option value="Alabama">Alabama</option>
@@ -263,7 +315,9 @@
 								<option value="Wisconsin">Wisconsin</option>
 								<option value="Wyoming">Wyoming</option>
 							</select>
-							<BR><BR><select name="country" required>
+							&nbsp &nbsp &nbsp &nbsp
+							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" ><BR><BR>
+							<select name="country" >
 								<option value="" disabled selected>Country</option>
 								<option value="United States of America">United States of America</option>
 								<option value="Afganistan">Afghanistan</option>
@@ -512,16 +566,98 @@
 								<option value="Zaire">Zaire</option>
 								<option value="Zambia">Zambia</option>
 								<option value="Zimbabwe">Zimbabwe</option>
-							</select>
-							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" required><BR><BR>
-							<input type="button" class="right" style="float:left;" value="Back" onclick="validateForm1(2,1);">
-							<input type="button" class="right" style="float:right;" value="Next" onclick="validateForm2(2,3);"><br>
+							</select>&nbsp &nbsp &nbsp &nbsp
+							<input type="button" class="form left" value="Back" onclick="validateForm1(2,1);">
+							<input type="button" class="form right" value="Next" onclick="validateForm2(2,3);"><br>
 						</div>
 						<div id="formpage_3" style="visibility: hidden; display: none;">
-							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" required><BR><BR>
+							<CENTER><h2>Education Information</h2></CENTER>
+							<select name="degree">
+								<option value="" disabled selected>Degree</option>
+								<option value="Spring 2014">BA</option>
+								<option value="Fall 2014">BS</option>
+								<option value="Spring 2015">MS</option>
+								<option value="Fall 2015">PhD</option>
+								<option value="Spring 2016">Other</option>
+							</select>&nbsp &nbsp &nbsp
+							<select name="major" >
+								<option value="" disabled selected>Major</option>
+								<option value="Applied Math">Applied Math</option>
+								<option value="Applied Physics">Applied Physics</option>
+								<option value="Applied Statistics">Applied Statistics</option>
+								<option value="Architecture">Architecture</option>
+								<option value="Biochemistry">Biochemistry</option>
+								<option value="Bioinformatics">Bioinformatics</option>
+								<option value="Biology">Biology</option>
+								<option value="Biomedical Engineering">Biomedical Engineering</option>
+								<option value="Biophysics">Biophysics	Physics</option>
+								<option value="Business">Business</option>
+								<option value="Business & Information Systems">Business & Information Systems</option>
+								<option value="Chemical Engineering">Chemical Engineering</option>
+								<option value="Chemistry">Chemistry</option>
+								<option value="Civil Engineering">Civil Engineering</option>
+								<option value="Communication & Media">Communication & Media</option>
+								<option value="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Science">Computer Science</option>
+								<option value="Computing and Business">Computing and Business</option>
+								<option value="Digital Design">Digital Design</option>
+								<option value="Electrical Engineering">Electrical Engineering</option>
+								<option value="Engineering Science">Engineering Science</option>
+								<option value="Engineering Technology">Engineering Technology</option>
+								<option value="Environmental Science">Environmental Sciences</option>
+								<option value="History">History</option>
+								<option value="Human Computer Interaction">Human Computer Interaction</option>
+								<option value="Industrial Design">Industrial Design</option>
+								<option value="Industrial Engineering">Industrial Engineering</option>
+								<option value="Information Systems">Information Systems</option>
+								<option value="Information Technology">Information Technology</option>
+								<option value="Interior Design">Interior Design</option>
+								<option value="Law, Technology and Culture">Law, Technology and Culture</option>
+								<option value="Mathematical Biology">Mathematical Biology</option>
+								<option value="Mathematics of Finance and Actuarial Science">Mathematics of Finance and Actuarial Science</option>
+								<option value="Mechanical Engineering">Mechanical Engineering</option>
+								<option value="Science, Technology & Society">Science, Technology & Society</option>
+								<option value="Theatre, Arts and Technology">Theatre, Arts and Technology</option>
+								<option value="Web and Information Systems">Web and Information Systems</option>
+								<option value="Other">Other</option>
+							</select><BR><BR>
+							<select name="gradDate" >
+								<option value="" disabled selected>Expected Graduation</option>
+								<option value="Spring 2014">Spring 2014</option>
+								<option value="Fall 2014">Fall 2014</option>
+								<option value="Spring 2015">Spring 2015</option>
+								<option value="Fall 2015">Fall 2015</option>
+								<option value="Spring 2016">Spring 2016</option>
+								<option value="Fall 2016">Fall 2016</option>
+								<option value="Spring 2017">Spring 2017</option>
+								<option value="Fall 2017">Fall 2017</option>
+								<option value="Spring 2018">Spring 2018</option>
+								<option value="Fall 2018">Fall 2018</option>
+								<option value="Spring 2019">Spring 2019</option>
+								<option value="Fall 2019">Fall 2019</option>
+							</select>&nbsp &nbsp &nbsp 
+							<select name="gradeLevel" >
+								<option value="" disabled selected>Grade Level</option>
+								<option value="HS Senior">HS Senior</option>
+								<option value="Freshman">Freshman</option>
+								<option value="Sophomore">Sophomore</option>
+								<option value="Junior">Junior</option>
+								<option value="Senior">Senior</option>
+								<option value="Graduate">Graduate</option> 
+							</select>&nbsp &nbsp &nbsp
+							<INPUT class="input" type="text" name="gpa" placeholder="GPA" maxlength="3" size="4" >
 							<BR><BR>
-							<input type="button" class="right" style="float:left;" value="Back" onclick="validateForm2(3,2);">
-							<input type="submit" class="right" style="float:right;" value="Submit"><br>
+							<label for="resumeLink">Resume:</label>
+							<input type="file" name="resumeLink" id="resumeLink"><br>
+							<input type="password" name="password" maxlength="16" placeholder="Password">&nbsp &nbsp &nbsp &nbsp
+							<input type="password" name="password2" maxlength="16" placeholder="Reenter Password">
+							<!--<input type="hidden" id="cmd" name="cmd" value="_s-xclick" disabled>
+							<input type="hidden" id="hbi" name="hosted_button_id" value="4Q3X7XHWA8LPN" disabled>
+							<input type="button" class="form right" value="Submit" border="0" alt="PayPal - The safer, easier way to pay online!" onclick="validateForm3();">
+							<img alt="" border="0" src="" width="1" height="1">-->
+							<input type="button" class="form left" value="Back" onclick="validateForm2(3,2);">
+							<input type="button" class="form right" value="Submit" id="Submit" onclick="validateForm3();">
+							<br>
 						</div>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">

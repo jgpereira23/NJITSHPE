@@ -355,7 +355,7 @@ text-decoration: none;
 	display:none;
 }
 /*Registration form buttons*/
-.right {
+.form {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
 	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
@@ -374,10 +374,12 @@ text-decoration: none;
 	border-bottom-left-radius:0px;
 	text-indent:0;
 	font-weight: normal;
+	position:absolute;
 	border:1px solid #84bbf3;
 	display:inline-block;
+	vertical-align:bottom;
 	color:#ffffff;
-	font-family:Verdana;
+	font-family:Century Gothic, Sans-serif;
 	font-size: 1.3em;
 	font-style:normal;
 	height:38px;
@@ -386,12 +388,19 @@ text-decoration: none;
 	text-decoration:none;
 	text-align:center;
 }
-.right:hover {
+.left{
+	bottom:5;
+	left:5;
+}
+.right{
+	bottom:5;
+	right:5;
+}
+.form:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
 	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
 	background-color:#378de5;
-}.right:active {
-	position:relative;
-	top:1px;
+}.form:active {
+	bottom:6;
 }
