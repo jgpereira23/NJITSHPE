@@ -14,8 +14,8 @@ function displayEvents($status){
 			if($eRow['link']=="" || $eRow['link']==null){
 				$link="NoImage.jpg";
 			}
-			$startTime=date("l M jS g:ia", strtotime($row['startTime']));
-			$endTime=date("g:ia", strtotime($row['endTime']));
+			$startTime=date("l M jS g:ia", strtotime($eRow['startTime']));
+			$endTime=date("g:ia", strtotime($eRow['endTime']));
 			echo "<tr>";
 			echo "<td><img src='Images/Flyers/{$link}' width='150' height='200'></td>";
 			echo "<td><h2> {$eRow['name']} </h2> <h4>{$eRow['location']} <br>{$startTime} to {$endTime} </h4> <p>{$eRow['description']} </p> </rd>";
