@@ -14,7 +14,7 @@ require("connect.php");
 
 $fname = strtolower($extension);
 
-$sql="SELECT * FROM User WHERE userID={$_SESSION['userID']}";
+$sql="SELECT * FROM user WHERE userID={$_SESSION['userID']};";
 $row=mysql_query($sql);
 $result = mysql_fetch_array($row);
 if($result['middleName']!=''){
@@ -33,7 +33,9 @@ else{
 && ($_FILES["file"]["size"] < 20000000)
 && in_array($fname, $allowedExts))
   {*/
-	if($_FILES["resumeLink"]['error'] != UPLOAD_ERR_OK){
+	echo var_dump($_FILES["resumeLink"]);
+	if($_FILES["resumeLink"]['error'] == UPLOAD_ERR_OK)
+	{
 		if ($_FILES["resumeLink"]["error"] > 0)
 		{
 			echo "Return Code: " . "<br>";
@@ -41,18 +43,18 @@ else{
 		else
 		{
 			//Saving the tmp copy of the file into specified location
-			/*if (file_exists("uploads/". $fname))
+			if (file_exists("uploads/". $fname))
 			{
 			  echo $_FILES["file"]["name"] . " already exists."."<br>";
 			}
 			else
-			{*/
-				//echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-				//echo "Type: " . $_FILES["file"]["type"] . "<br>";
-				//echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-				//echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+			{
+				echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+				echo "Type: " . $_FILES["file"]["type"] . "<br>";
+				echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+				echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 			move_uploaded_file($_FILES["resumeLink"]["tmp_name"],"uploads/". $fname);
-				//echo "Stored in: " . "C:/wamp/www/Soshul/upload/" . $_FILES["file"]["name"]."<br>";
+				echo "Stored in: " . "/afs/cad/web/club/shpe/public_html/Resumes" . $_FILES["file"]["name"]."<br>";
 				//adding picture into photo table in phpMyAdmin
 			$sql = "UPDATE user
 						SET resumeLink='{$fname}.pdf'
@@ -65,10 +67,9 @@ else{
 			}
 				
 				
-			
+			}
 		}
 	}
-  //}
 	//else
   //{
   //echo "Invalid file type, needs to be a photo.";

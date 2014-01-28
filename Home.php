@@ -170,11 +170,13 @@
 				}
 				x=document.forms["Register"]["password"].value;
 				if(x.length<6){
-					alert("Password needs to be between 6 and 16 characters")
+					alert("Password needs to be between 6 and 16 characters");
+					return false;
 				}
 				var y=document.forms["Register"]["password2"].value;
 				if((y!="" || y!=null) && y!=x){
-					alert("Passwords do not match!")
+					alert("Passwords do not match!");
+					return false;
 				}
 				var arr1 = new Array;
 				x=document.forms["Register"]["resumeLink"].value;
@@ -316,7 +318,7 @@
 								<option value="Wyoming">Wyoming</option>
 							</select>
 							&nbsp &nbsp &nbsp &nbsp
-							<INPUT class="input" type="number" placeholder="Zip Code" name="postalCode" maxlength="5" ><BR><BR>
+							<INPUT class="input" type="text" placeholder="Zip Code" name="postalCode" maxlength="5" ><BR><BR>
 							<select name="country" >
 								<option value="" disabled selected>Country</option>
 								<option value="United States of America">United States of America</option>
