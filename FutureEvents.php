@@ -6,8 +6,9 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
+		<script type="text/javascript" src="Scripts/updateText.php"></script>
+		
 		<script type="text/javascript">
-
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-35750639-1']);
 			_gaq.push(['_trackPageview']);
