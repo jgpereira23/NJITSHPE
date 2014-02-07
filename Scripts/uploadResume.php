@@ -1,13 +1,13 @@
 <?php
-session_start();
+//session_start();
 require("connect.php");
 
 //$_SERVER["DOCUMENT_ROOT"]='/afs/cad/web/ucs/html';
 
 //What file extensions are allowed to upload
 //$allowedExts = array("gif", "jpeg", "jpg", "png");
-//$temp = explode(".", $_FILES["resumeLink"]["name"]);
-//$extension = end($temp);
+$temp = explode(".", $_FILES["resumeLink"]["name"]);
+$extension = end($temp);
 
 //check the file extension
 //Creates a tmp copy of file
@@ -49,16 +49,16 @@ else{
 			}
 			else
 			{
-				echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-				echo "Type: " . $_FILES["file"]["type"] . "<br>";
-				echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-				echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
-			move_uploaded_file($_FILES["resumeLink"]["tmp_name"],"uploads/". $fname);
-				echo "Stored in: " . "/afs/cad/web/club/shpe/public_html/Resumes" . $_FILES["file"]["name"]."<br>";
+				echo "Upload: " . $_FILES["resumeLink"]["name"] . "<br>";
+				echo "Type: " . $_FILES["resumeLink"]["type"] . "<br>";
+				echo "Size: " . ($_FILES["resumeLink"]["size"] / 1024) . " kB<br>";
+				echo "Temp file: " . $_FILES["resumeLink"]["tmp_name"] . "<br>";
+			move_uploaded_file($_FILES["resumeLink"]["tmp_name"],"../Resumes/". $fname);
+				echo "Stored in: " . "/Resumes" . $_FILES["resumeLink"]["name"]."<br>";
 				//adding picture into photo table in phpMyAdmin
 			$sql = "UPDATE user
 						SET resumeLink='{$fname}.pdf'
-						WHERE userID='{$_SESSION[userID]}';";
+						WHERE userID='{$_SESSION['userID']}';";
 			if(!mysql_query($sql)){
 				echo"Error: ". mysql_error();
 			}
