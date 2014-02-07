@@ -5,7 +5,6 @@ $query="SELECT * FROM `update` WHERE 1 Order By dateCreated;";
 $result = mysql_query($query);
 
 $imgCount=0;
-$arrText=array();
 $arrLink=array();
 
 if($result === FALSE) {
@@ -13,7 +12,6 @@ if($result === FALSE) {
 }
 
 while($uRow=mysql_fetch_array($result)){
-	array_push($arrText, $uRow['text']);
 	array_push($arrLink, $uRow['link']);
 }
 
