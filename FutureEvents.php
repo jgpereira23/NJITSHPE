@@ -42,6 +42,13 @@
 						<li><a href="https://twitter.com/NJIT_SHPE" target="_blank"><img class="grayscale" src="Images/Twitter.png"></a></li><li><a href="https://www.facebook.com/groups/njitshpe/" target="_blank"><img class="grayscale" src="Images/Facebook.png"></a></li><li><a href="http://instagram.com/njitshpe" target="_blank"><img class="grayscale" src="Images/Instagram.png"></a></li><li><a href="http://www.youtube.com/user/NJITSHPE" target="_blank"><img class="grayscale" src="Images/Youtube.png"></a></li>
 					</ul>
 				</div>
+				<div id="login">
+					<?php
+					//session_start();
+					$display = require("Scripts/userlogin.php");
+					echo $display;
+					?>
+				</div>
 			</div>
 		</div>
 		<div id="footer">

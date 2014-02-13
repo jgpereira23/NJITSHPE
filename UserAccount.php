@@ -7,8 +7,8 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="jscript.js"></script>
 		<script type="text/javascript" src="Scripts/updateText.php"></script>
+		
 		<script type="text/javascript">
-
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-35750639-1']);
 			_gaq.push(['_trackPageview']);
@@ -22,31 +22,30 @@
 	<body>
 		<div id="vid"><iframe width="640" height="480" name="action" frameborder="0" ></iframe></div>
 		<div id="inactive"></div>
-
 		<div id="container">
 			<div class="bar" id="nav">
 				<?php
 					session_start();
-					$_SESSION['curr'] = 0;
+					$_SESSION['curr'] = 6;
 					$display = include "Scripts/navBar.php";
 					echo $display;
 				?>
 			</div><div class="bar" id="content"><div id="middle">
-					<h1>&nbsp;Frequently Asked Questions</h1>
-					<h2>More info for this page will be coming soon!</h2>
+					<h1>&nbsp;My Account</h1>
+					<?php
+						echo"<table>";
+						echo"<tr><h2>General Information</h2></tr>";
+						echo "<tr><h4>First Name:\t".$_SESSION['firstName']."</h4></tr>";
+						echo "<tr><h4>Last Name:\t".$_SESSION['lastName']."</h4></tr>";
+						echo '<tr><td><h4>Email:  '.$_SESSION['email'].'</h4></td><td><form name="edit" method="post" action="Scripts/checklogin.php"><input class="button" type="submit" name="edit" value="Edit"></form></td></tr>';
+						echo '<tr><td>Submit New Resume: <form name="resume" method="post" action="Scripts/checklogin.php"><input class="button" type="submit" name="resume" value="Upload"></form></td></tr>';
+						echo"</table>";
+					?>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
 					<ul>
-							
 						<li><a href="https://twitter.com/NJIT_SHPE" target="_blank"><img class="grayscale" src="Images/Twitter.png"></a></li><li><a href="https://www.facebook.com/groups/njitshpe/" target="_blank"><img class="grayscale" src="Images/Facebook.png"></a></li><li><a href="http://instagram.com/njitshpe" target="_blank"><img class="grayscale" src="Images/Instagram.png"></a></li><li><a href="http://www.youtube.com/user/NJITSHPE" target="_blank"><img class="grayscale" src="Images/Youtube.png"></a></li>
 					</ul>
-				</div>
-				<div id="login">
-					<?php
-					//session_start();
-					$display = require("Scripts/userlogin.php");
-					echo $display;
-					?>
 				</div>
 			</div>
 		</div>
@@ -73,5 +72,4 @@
 			</div>
 		</div>
 	</body>
-</html>
 </html>
