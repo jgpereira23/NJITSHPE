@@ -200,7 +200,7 @@
 						}
 					}
 				}
-				document.Register.submit();
+				document.getElementById("Register").submit();
 				return true;
 			}
 		</script>
@@ -230,7 +230,7 @@
 				?>
 			</div><div class="bar" id="content"><div id="middle" style="min-height:312px;></br>
 				<p style="margin-left=5px">
-					<FORM name="Register" METHOD=POST ACTION="Scripts/registerUser.php" enctype="multipart/form-data">
+					<FORM name="Register" id="Register" METHOD=POST ACTION="Payment.php" enctype="multipart/form-data">
 						<div id="formpage_1" style="visibility: visible; display: block;">
 							<CENTER><h2>Personal Information</h2></CENTER>
 							<INPUT class="input" type="text" placeholder="First Name" name="firstName" size="20" > &nbsp &nbsp &nbsp 
@@ -244,7 +244,7 @@
 							<label for="dateOfBirth">Birthday:</label> &nbsp <INPUT type="date" name="dateOfBirth" value="birthdate" >
 							<BR><BR> </p>
 							<INPUT class="input" type ="email" placeholder=" E-mail" name="email" value="" size="18" >&nbsp &nbsp &nbsp 
-							<input type="tel" placeholder="Phone Number" name="number"><BR><BR>
+							<INPUT type="tel" placeholder="Phone Number" name="number"><BR><BR>
 							<INPUT class="input" name="ethnicity" placeholder="Ethnicity (Nationality)" size="20" > &nbsp &nbsp &nbsp 
 							<select id="legalStatus" name="legalStatus" >
 								<option value="" disabled selected>Legal Status</option>
@@ -267,56 +267,57 @@
 							<select name="state" >
 								<option value="" disabled selected>State</option>
 								<option value="Not in US">Not in US</option>
-								<option value="Alabama">Alabama</option>
-								<option value="Alaska">Alaska</option>
-								<option value="Arizona">Arizona</option>
-								<option value="Arkansas">Arkansas</option>
-								<option value="California">California</option>
-								<option value="Colorado">Colorado</option>
-								<option value="Connecticut">Connecticut</option>
-								<option value="Delaware">Delaware</option>
-								<option value="Florida">Florida</option>
-								<option value="Georgia">Georgia</option>
-								<option value="Hawaii">Hawaii</option>
-								<option value="Idaho">Idaho</option>
-								<option value="Illinois">Illinois</option>
-								<option value="Indiana">Indiana</option>
-								<option value="Iowa">Iowa</option>
-								<option value="Kansas">Kansas</option>
-								<option value="Kentucky">Kentucky</option>
-								<option value="Louisiana">Louisiana</option>
-								<option value="Maine">Maine</option>
-								<option value="Maryland">Maryland</option>
-								<option value="Massachusetts">Massachusetts</option>
-								<option value="Michigan">Michigan</option>
-								<option value="Minnesota">Minnesota</option>
-								<option value="Mississippi">Mississippi</option>
-								<option value="Missouri">Missouri</option>
-								<option value="Montana">Montana</option>
-								<option value="Nebraska">Nebraska</option>
-								<option value="Nevada">Nevada</option>
-								<option value="New Hampshire">New Hampshire</option>
-								<option value="New Jersey">New Jersey</option>
-								<option value="New Mexico">New Mexico</option>
-								<option value="New York">New York</option>
-								<option value="North Carolina">North Carolina</option>
-								<option value="North Dakota">North Dakota</option>
-								<option value="Ohio">Ohio</option>
-								<option value="Oklahoma">Oklahoma</option>
-								<option value="Oregon">Oregon</option>
-								<option value="Pennsylvania">Pennsylvania</option>
-								<option value="Rhode Island">Rhode Island</option>
-								<option value="South Carolina">South Carolina</option>
-								<option value="South Dakota">South Dakota</option>
-								<option value="Tennessee">Tennessee</option>
-								<option value="Texas">Texas</option>
-								<option value="Utah">Utah</option>
-								<option value="Vermont">Vermont</option>
-								<option value="Virginia">Virginia</option>
-								<option value="Washington">Washington</option>
-								<option value="West Virginia">West Virginia</option>
-								<option value="Wisconsin">Wisconsin</option>
-								<option value="Wyoming">Wyoming</option>
+								<option value="AL">Alabama</option>
+								<option value="AK">Alaska</option>
+								<option value="AZ">Arizona</option>
+								<option value="AR">Arkansas</option>
+								<option value="CA">California</option>
+								<option value="CO">Colorado</option>
+								<option value="CT">Connecticut</option>
+								<option value="DE">Delaware</option>
+								<option value="DC">District of Columbia</option>
+								<option value="FL">Florida</option>
+								<option value="GA">Georgia</option>
+								<option value="HI">Hawaii</option>
+								<option value="ID">Idaho</option>
+								<option value="IL">Illinois</option>
+								<option value="IN">Indiana</option>
+								<option value="IA">Iowa</option>
+								<option value="KS">Kansas</option>
+								<option value="KY">Kentucky</option>
+								<option value="LA">Louisiana</option>
+								<option value="ME">Maine</option>
+								<option value="MD">Maryland</option>
+								<option value="MA">Massachusetts</option>
+								<option value="MI">Michigan</option>
+								<option value="MN">Minnesota</option>
+								<option value="MS">Mississippi</option>
+								<option value="MO">Missouri</option>
+								<option value="MT">Montana</option>
+								<option value="NE">Nebraska</option>
+								<option value="NV">Nevada</option>
+								<option value="NH">New Hampshire</option>
+								<option value="NJ">New Jersey</option>
+								<option value="NM">New Mexico</option>
+								<option value="NY">New York</option>
+								<option value="NC">North Carolina</option>
+								<option value="ND">North Dakota</option>
+								<option value="OH">Ohio</option>
+								<option value="OK">Oklahoma</option>
+								<option value="OR">Oregon</option>
+								<option value="PA">Pennsylvania</option>
+								<option value="RI">Rhode Island</option>
+								<option value="SC">South Carolina</option>
+								<option value="SD">South Dakota</option>
+								<option value="TN">Tennessee</option>
+								<option value="TX">Texas</option>
+								<option value="UT">Utah</option>
+								<option value="VT">Vermont</option>
+								<option value="VA">Virginia</option>
+								<option value="WA">Washington</option>
+								<option value="WV">West Virginia</option>
+								<option value="WI">Wisconsin</option>
+								<option value="WY">Wyoming</option>
 							</select>
 							&nbsp &nbsp &nbsp &nbsp
 							<INPUT class="input" type="text" placeholder="Zip Code" name="postalCode" maxlength="5" ><BR><BR>
@@ -659,8 +660,31 @@
 							<input type="button" class="form right" value="Submit" border="0" alt="PayPal - The safer, easier way to pay online!" onclick="validateForm3();">
 							<img alt="" border="0" src="" width="1" height="1">-->
 							<input type="button" class="form left" value="Back" onclick="validateForm2(3,2);">
-							<input type="button" class="form right" value="Submit" id="Submit" onclick="validateForm3();">
+							<input type="button" class="form right" value="Next" id="Submit" onclick="validateForm3();">
 							<br>
+						</div>
+						<div id="formpage_4" style="visibility: hidden; display: none;">
+							<div id="Paypal" style="visibility: visible; display: block;" class="right">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="7WMRTWELVBYE2">
+								<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								<table border="0" cellpadding="10" cellspacing="0" align="center">
+									<tr>
+										<td align="center"></td>
+									</tr>
+									<tr>
+										<td align="center">
+											<a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">
+												<img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="Skip">
+									
+							</div>
 						</div>
 				</div></div><div class="bar" id="sidebar">
 				<div id="social">
