@@ -17,12 +17,12 @@
 					alert("First name must be filled out");
 					return false;
 				}
-				x=document.forms["Register"]["middleName"].value;
-				if (x==null || x=="")
-				{
-					alert("Middle name must be filled out");
-					return false;
-				}
+				//x=document.forms["Register"]["middleName"].value;
+				//if (x==null || x=="")
+				//{
+					//alert("Middle name must be filled out");
+					//return false;
+				//}
 				x=document.forms["Register"]["lastName"].value;
 				if (x==null || x=="")
 				{
@@ -180,7 +180,7 @@
 					return false;
 				}
 				var arr1 = new Array;
-				x=document.forms["Register"]["resumeLink"].value;
+				/*x=document.forms["Register"]["resumeLink"].value;
 				if(x!="" && x!=null){
 					arr1 = x.split("\\");
 					var len = arr1.length;
@@ -199,7 +199,7 @@
 							return false;
 						}
 					}
-				}
+				}*/
 				document.getElementById("Register").submit();
 				return true;
 			}
@@ -228,8 +228,9 @@
 					//ARDLzxCUOx8hwOxJLVB1Wq7i2sk7ukGmY2WcKOGGOMFG-PMIZdpOwAkfM2Xx
 					//ENRrsxCzB9SAdolJ77Zb5m6QgBHeVv7xhDnnT7lp3IcADIWNmcglE6mblTSl
 				?>
-			</div><div class="bar" id="content"><div id="middle" style="min-height:312px;></br>
+			</div><div class="bar" id="content"><div id="middle" style="min-height:400px;></br>
 				<p style="margin-left=5px">
+					<h1>&nbsp;Registration</h1>
 					<FORM name="Register" id="Register" METHOD=POST ACTION="Payment.php" enctype="multipart/form-data">
 						<div id="formpage_1" style="visibility: visible; display: block;">
 							<CENTER><h2>Personal Information</h2></CENTER>
@@ -651,14 +652,10 @@
 							</select>&nbsp &nbsp &nbsp
 							<INPUT class="input" type="text" name="gpa" placeholder="GPA" maxlength="3" size="4" >
 							<BR><BR>
-							<label for="resumeLink">Resume:</label>
-							<input type="file" name="resumeLink" id="resumeLink"><br>
 							<input type="password" name="password" maxlength="16" placeholder="Password">&nbsp &nbsp &nbsp &nbsp
-							<input type="password" name="password2" maxlength="16" placeholder="Reenter Password">
-							<!--<input type="hidden" id="cmd" name="cmd" value="_s-xclick" disabled>
-							<input type="hidden" id="hbi" name="hosted_button_id" value="4Q3X7XHWA8LPN" disabled>
-							<input type="button" class="form right" value="Submit" border="0" alt="PayPal - The safer, easier way to pay online!" onclick="validateForm3();">
-							<img alt="" border="0" src="" width="1" height="1">-->
+							<input type="password" name="password2" maxlength="16" placeholder="Reenter Password"><BR><BR>
+							<!--<label for="resumeLink">Resume:</label>
+							<input type="file" name="resumeLink" id="resumeLink"><br>-->
 							<input type="button" class="form left" value="Back" onclick="validateForm2(3,2);">
 							<input type="button" class="form right" value="Next" id="Submit" onclick="validateForm3();">
 							<br>

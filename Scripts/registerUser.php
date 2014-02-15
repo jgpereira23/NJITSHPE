@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	require('connect.php');
-	var_Dump($_SESSION['email']);
 	$sql = "SELECT email FROM user WHERE email='{$_SESSION['email']}';";
 	$row=mysql_query($sql);
 	$count = mysql_num_rows($row);
