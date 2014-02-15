@@ -182,15 +182,22 @@ text-decoration: none;
 	color:#FAFAFA;
 }
 
-#navbar ul li a:hover{
+#navbar ul li div a:hover{
 	border-radius:3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	#color: #6699CC;
+	color: #6699CC;
 	font-size:1.1em;
 }
 
 #navbar ul li:hover{
+	border-radius:3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	color: #6699CC;
+}
+
+#navbar ul li a:hover{
 	border-radius:3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
