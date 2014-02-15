@@ -35,6 +35,18 @@ else{
 	$_SESSION['user_ID'] = (int)$result['userID'];
 	$_SESSION['firstName'] = $result['firstName'];
 	$_SESSION['lastName'] = $result['lastName'];
+	$_SESSION['major'] = $result['major'];
+	$_SESSION['gradDate'] = $result['gradDate'];
+	$_SESSION['number'] = $result['number'];
+	$_SESSION['address'] = $result['address'];
+	$_SESSION['city'] = $result['city'];
+	$_SESSION['state'] = $result['state'];
+	$_SESSION['degree'] = $result['degree'];
+	$_SESSION['gpa'] = $result['gpa'];
+	$_SESSION['gradeLevel'] = $result['gradeLevel'];
+	$_SESSION['country'] = $result['country'];
+	$_SESSION['dob'] = $result['dateOfBirth'];
+	
 	$_SESSION['email'] = $email;
 	$_SESSION['loggedin'] = true;
 	$_SESSION['success'] = true;

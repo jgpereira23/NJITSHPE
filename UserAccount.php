@@ -33,11 +33,40 @@
 			</div><div class="bar" id="content"><div id="middle">
 					<h1>&nbsp;My Account</h1>
 					<?php
-						echo"<table>";
-						echo"<tr><h2>General Information</h2></tr>";
-						echo "<tr><h4>First Name:\t".$_SESSION['firstName']."</h4></tr>";
-						echo "<tr><h4>Last Name:\t".$_SESSION['lastName']."</h4></tr>";
-						echo '<tr><td><h4>Email:  '.$_SESSION['email'].'</h4></td><td><form name="edit" method="post" action="Scripts/checklogin.php"><input class="button" type="submit" name="edit" value="Edit"></form></td></tr>';
+						echo"<table>
+						<tr><td><h2 align>General Information</h2></td></tr>
+						<tr>
+							<td><h4>First Name:\t".$_SESSION['firstName']."</h4></td>
+							<td><h4>Birthday: ".$_SESSION['dob']."</h4></td>
+						</tr>
+						<tr>
+							<td><h4>Last Name:\t".$_SESSION['lastName']."</h4></td>
+							<td><h4>Phone #:  ".$_SESSION['number']."</h4></td>
+						</tr>
+						<tr>
+							<td><h4>Email:  ".$_SESSION['email']."</h4></td>
+						</tr>
+						<tr><td><h2>Address Information</h2></td></tr>
+						<tr>
+							<td><h4>Address:  ".$_SESSION['address']."</h4></td>
+							<td><h4>City:  ".$_SESSION['city']."</h4></td>
+						</tr>
+						<tr>
+							<td><h4>State:  ".$_SESSION['state']."</h4></td>
+							<td><h4>Country: ".$_SESSION['country']."</h4></td>
+						</tr>
+						<tr><td><h2>Education Information</h2></td></tr>
+						<tr>
+							<td><h4>Major:  ".$_SESSION['major']."</h4></td>
+							<td><h4>Degree:  ".$_SESSION['degree']."</h4></td>
+						</tr>
+						<tr>
+							<td><h4>Grade Level  ".$_SESSION['gradeLevel']."</h4></td>
+							<td><h4>GPA:  ".$_SESSION['gpa']."</h4></td>
+						</tr>";
+						
+						echo'<tr><td><form name="edit" method="post" action="Scripts/checklogin.php"><input class="button" type="submit" name="edit" value="Edit"></form></td><tr>';
+						
 						echo '<tr><td>Submit New Resume: <form name="resume" method="post" action="Scripts/checklogin.php"><input class="button" type="submit" name="resume" value="Upload"></form></td></tr>';
 						echo"</table>";
 					?>
